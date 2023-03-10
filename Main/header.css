@@ -13,13 +13,22 @@
 .headerLeft{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 
 h1{
     font-size: 75px;
     line-height: 75px;
     font-weight: 400;
+}
+
+.infoLeft{
+    width: fit-content;
+    margin-top: 50px;
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .role{
@@ -39,7 +48,7 @@ h1{
 }
 
 .socials #github{
-    
+
 }
 
 
@@ -54,4 +63,32 @@ h1{
     filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.5));
     transform: matrix(-1, 0, 0, 1, 0, 0);
     opacity: .75;
+}
+
+
+@media (max-width: 1200px){
+    .headerRight{
+        height: 275px;
+    }
+    .headerRight img{
+        display: none;
+    }
+}
+
+@media (max-width: 755px){
+    .infoLeft{
+        margin-top: 20px;
+        width: 100%;
+    }
+    .header{
+        text-align: center;
+    }
+    .headerRight{
+        display: none;
+    }
+    .role{
+       width: 100%;
+       margin-bottom: 20px;
+       text-align: center;
+    }
 }

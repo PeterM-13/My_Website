@@ -18,6 +18,7 @@ reuse throughout your stylesheet */
 
 body{
     background: black;
+    min-width: 690px;
 }
 
 section{
