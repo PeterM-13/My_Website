@@ -1,0 +1,27 @@
+:root{
+    /* 
+:root is where you declare and initialize global vars that you can 
+reuse throughout your stylesheet */
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    
+    font-family: 'Inter';
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 25px;
+    /*line-height:0;*/
+ }
+
+body{
+    background: black;
+}
+
+section{
+    padding-left: 15%;
+    padding-right: 15%;
+}
+

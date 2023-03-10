@@ -1,0 +1,57 @@
+.header{
+    background: linear-gradient(180deg, #2f5cff 0%, rgba(0, 56, 255, 0) 100%);
+    padding-top: 100px;
+    height: 350px;
+}
+
+.headerContent{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.headerLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+h1{
+    font-size: 75px;
+    line-height: 75px;
+    font-weight: 400;
+}
+
+.role{
+   
+}
+
+.socials{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.socials img{
+    width: auto;
+    height: 52px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+}
+
+.socials #github{
+    
+}
+
+
+.headerRight{
+
+}
+
+.headerRight img{
+    width: auto;
+    height: 275px;
+
+    filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.5));
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+    opacity: .75;
+}
