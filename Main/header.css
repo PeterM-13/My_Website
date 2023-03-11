@@ -2,13 +2,11 @@
     background: linear-gradient(180deg, #2f5cff 0%, rgba(0, 56, 255, 0) 100%);
     padding-top:2rem;
     height: 25rem;
-
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
 }
-
 .headerContent{
     max-width: 50rem;
     width: 100%;
@@ -16,20 +14,17 @@
     flex-direction: row;
     justify-content: space-between;
 }
-
 .headerLeft{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     height: 250px;
 }
-
 h1{
     font-size: 75px;
     line-height: 75px;
     font-weight: 400;
 }
-
 .infoLeft{
     width: fit-content;
     margin-top: 50px;
@@ -38,27 +33,22 @@ h1{
     flex-direction: column;
     justify-content: space-between;
 }
-
 .role{
    
 }
-
 .socials{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
-
 .socials img{
     width: auto;
     height: 52px;
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
 }
-
 .headerRight{
     height: 250px;
 }
-
 .headerRight img{
     width: auto;
     height: 250px;
@@ -69,16 +59,10 @@ h1{
 }
 
 
-@media (max-width: 1100px){
-    .headerRight{
-        height: 275px;
+@media (max-width: 1200px){
+    .headerContent{
+        max-width: 450px;
     }
-    .headerRight img{
-        display: none;
-    }
-}
-
-@media (max-width: 755px){
     .infoLeft{
         margin-top: 20px;
         width: 100%;

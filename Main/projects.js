@@ -1,12 +1,18 @@
-let projects = document.querySelectorAll(".project").length;
-let scrollDist = 1030;
-let scrollMax = projects * scrollDist;
+const projects = document.querySelectorAll(".project").length;
+let scrollDist;
+let scrollMax;
 
+checkSize();
+function checkSize(){
+    scrollDist =((window.innerWidth > 1200)? 1000:500);
+    scrollMax = projects * scrollDist;
+}
 
 document.querySelector("#leftArrow").addEventListener("click", leftClick);
 document.querySelector("#rightArrow").addEventListener("click", rightClick);
 
 function leftClick(){
+    checkSize();
     let pos = document.querySelector('.projectsContainer').scrollLeft;
     if(pos-scrollDist > 0){
         document.querySelector('.projectsContainer').scrollLeft = pos - scrollDist;
@@ -16,6 +22,7 @@ function leftClick(){
 }
 
 function rightClick(){
+    checkSize();
     let pos = document.querySelector('.projectsContainer').scrollLeft;
     if(pos+scrollDist < scrollMax){
         document.querySelector('.projectsContainer').scrollLeft = pos + scrollDist;
