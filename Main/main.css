@@ -19,11 +19,16 @@ reuse throughout your stylesheet */
 body{
     background: black;
     min-width: 690px;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 section{
-    padding-left: 20%;
-    padding-right: 20%;
+    /*padding-left: 20%;
+    padding-right: 20%;*/
+
     /*margin: 0 auto;
     width: 60%;*/
 }
