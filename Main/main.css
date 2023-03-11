@@ -22,7 +22,15 @@ body{
 }
 
 section{
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 20%;
+    padding-right: 20%;
+    /*margin: 0 auto;
+    width: 60%;*/
+}
+
+h2{
+    font-weight: 400;
+    font-size: 38px;
+    width: 100%;
 }
 
