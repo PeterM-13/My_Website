@@ -1,5 +1,5 @@
 .work1{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%,  rgba(255, 255, 255, 0.7) 125%);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%,  rgba(255, 255, 255, 1) 125%);
     height: 18rem;
     display: flex;
     justify-content: flex-start;
@@ -7,19 +7,80 @@
     align-items: center;
     padding-top: 5rem;
 }
-
 .workContent1{
     max-width: 50rem;
     width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
 }
-.workContent1 h2{
+.workTop{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.workPlace{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.workCircle{
+    background-color: white;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.workLogo{
+    width: 100%;
+    height: auto;
+    border-radius: 28%;
+}
+.workLine{
+    background-color: white;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+    width: 4px;
+    height: 30%;
+    z-index: 2;
+}
+.workDate{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+    margin-bottom: 5px;
+}
+.workBottom .workPlace{
+    justify-content: flex-start;
+}
+.workBottom .workDate{
+    justify-content: flex-start;
+    margin-top: 5px;
+}
+.workBottom{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
 }
-
 
 .work2{
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) -35%, rgba(255, 255, 255, 0)  125%);
-    height: 18rem;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) -25%, rgba(255, 255, 255, 0)  90%);
+    height: 414px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -29,6 +90,7 @@
 .workContent2{
     max-width: 50rem;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -37,15 +99,10 @@
 }
 #line{
     background-color: white;
+    filter: drop-shadow(0px 0px 5px rgba(0, 0, 0, 0.5));
     height: 5px;
     width: 100%;
     border-radius: 2px;
-
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    position: absolute;
-    
 }
 #workArrow{
     rotate: 180deg;
@@ -71,5 +128,19 @@
     }
     .workContent2{
         max-width: 450px;
+    }
+
+    
+    .workCircle{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        padding: 12px;
+    }
+    .workDate{
+        width: 80px;
+    }
+    .workPlace{
+        width: 90px;
     }
 }
