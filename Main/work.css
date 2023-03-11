@@ -1,0 +1,75 @@
+.work1{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 10%,  rgba(255, 255, 255, 0.7) 125%);
+    height: 18rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5rem;
+}
+
+.workContent1{
+    max-width: 50rem;
+    width: 100%;
+}
+.workContent1 h2{
+
+}
+
+
+.work2{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) -35%, rgba(255, 255, 255, 0)  125%);
+    height: 18rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.workContent2{
+    max-width: 50rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+#line{
+    background-color: white;
+    height: 5px;
+    width: 100%;
+    border-radius: 2px;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    position: absolute;
+    
+}
+#workArrow{
+    rotate: 180deg;
+    filter: invert(100%);
+    height: 39px;
+    width: 39px;
+    position: absolute;
+    top: -17px;
+    right: -1px;
+}
+
+
+
+@media (max-width: 1200px){
+    .work1{
+
+    }
+    .work2{
+
+    }
+    .workContent1{
+        max-width: 450px;
+    }
+    .workContent2{
+        max-width: 450px;
+    }
+}

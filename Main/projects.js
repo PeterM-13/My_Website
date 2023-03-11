@@ -41,9 +41,8 @@ function rightClick(){
 
 //document.querySelector('.projectsContainer').addEventListener("scroll", function(e){console.log(e.target.scrollLeft)})
 
-
 let interval = setInterval(async()=>{
-    document.querySelector("#rightArrow").style.scale = "1.15";
+    document.querySelector("#rightArrow").style.scale = "0.35";//1.15
     await new Promise(r => setTimeout(r, 300));
-    document.querySelector("#rightArrow").style.scale = "1";
+    document.querySelector("#rightArrow").style.scale = "0.3";
 }, 5000)

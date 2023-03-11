@@ -19,10 +19,10 @@ reuse throughout your stylesheet */
 body{
     background: black;
     min-width: 690px;
-
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
+    overflow-y: scroll;
 }
 
 section{
