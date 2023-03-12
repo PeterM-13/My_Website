@@ -1,5 +1,5 @@
 :root{
-
+    color-scheme: dark;
 }
 
 * {
@@ -36,4 +36,5 @@ h2{
 a{
     /*color: rgb(0, 200, 255);*/
     color: #6183ff;
+    cursor:pointer!important;
 }

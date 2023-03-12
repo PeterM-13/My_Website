@@ -1,6 +1,6 @@
 .skills{
     background: black;
-    height: 18rem;
+    height: 35rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -14,4 +14,92 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
+}
+.skillsList{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 2rem 20px;
+}
+.skillIcon{
+    height: 60px;
+    width: auto;
+    object-fit: cover;
+    transition: 1s;
+    cursor: help;
+}
+#RESTapi{
+    width: 75px;
+}
+#Xcode{
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.interestIcon{
+    height: 100px;
+    width: auto;
+    object-fit: cover;
+    cursor: help;
+}
+#interestsTitle{
+    margin-top: 4.5rem;
+}
+#skillsInfo{
+    width: 100%;
+    margin-top: 2rem;
+    transition-duration: 0.75s;
+    height: 25px;
+}
+.skillsInfoH{
+    visibility: hidden;
+    opacity: 0;
+}
+.skillsInfoV{
+    visibility: visible;
+    opacity: 1;
+}
+#interestsInfo{
+    width: 100%;
+    margin-top: 2rem;
+    transition-duration: 0.75s;
+    height: 5px;
+}
+.interestsInfoH{
+    visibility: hidden;
+    opacity: 0;
+}
+.interestsInfoV{
+    visibility: visible;
+    opacity: 1;
+}
+strong{
+    color: #6183ff;
+    visibility: inherit;
+}
+a img{
+    cursor: pointer!important;
+}
+
+
+@media (max-width: 1200px){
+    .skills{
+        height: 1100px;
+    }
+    .skillsContent{
+        max-width: 450px;
+    }
+    .skillsList{
+        max-width: 450px;
+        gap: 2rem 20px;
+    }
+    #xcode{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    #mechanical{
+        display: none;
+    }
 }
