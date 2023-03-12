@@ -54,7 +54,7 @@ const interestsInfo = {
     "Mechanical Work": " > I have access to a workshop of tools which I have learnt to use",
     "Programming": " > My work and my hobby. From apps to games to websites, enjoy it all",
     "Badminton": " > Keen badminton player, I play once a week at my local club",
-    "Cycling": " > Enjoy biking of-road with friends, when the weather is good",
+    "Cycling": " > Enjoy biking off-road with friends, when the weather is good",
 }
 
 function changeContentI(id){
