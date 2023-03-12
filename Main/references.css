@@ -1,0 +1,100 @@
+.references{
+    background: linear-gradient(180deg, rgba(0, 56, 255, 0) 0%, #2f5cff 100%);
+    height: 43rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+.referencesContent{
+    max-width: 50rem;
+    width: 100%;
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.referencesBlock{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#referencesLeft{
+    padding-right: 20px;
+}
+#referencesRight{
+    padding-left: 20px;
+}
+.referencesList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 450px;
+    gap: 20px;
+}
+.reference{
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 12px;
+    box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    height: 143px;
+    gap: 20px;
+}
+.reference img{
+    max-width: 50px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 6px;
+    filter: drop-shadow(0px 0px 1px rgba(255, 255, 255, 1));
+}
+.reference p{
+
+}
+span{
+    color:white; 
+    font-size: 12px;
+}
+span strong{
+    color:white; 
+    font-size: 14px;
+}
+
+.download{
+    cursor: pointer;
+    padding: 15px 35px 15px 35px;
+    background-color: rgba(255, 255, 255, 0.12);
+    border: 5px solid white;
+    border-radius: 12px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.75));
+    margin-bottom: 3rem;
+    margin-top: 4rem;
+    transition: 0.5s;
+}
+.download:hover{
+    scale: 1.075;
+    transition: 0.5s;
+}
+.download:active{
+    scale: 0.95;
+    transition: 0.25s;
+}
+
+
+@media (max-width: 1200px){
+    .references{
+        height: 73rem;
+    }
+    .referencesContent{
+        max-width: 450px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .referencesBlock{
+        max-width: 450px;
+    }
+}

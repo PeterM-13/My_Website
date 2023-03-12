@@ -1,6 +1,5 @@
 .skills{
-    background: black;
-    height: 35rem;
+    height: 34rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -45,7 +44,7 @@
     cursor: help;
 }
 #interestsTitle{
-    margin-top: 4.5rem;
+    margin-top: 4rem;
 }
 #skillsInfo{
     width: 100%;
@@ -86,7 +85,7 @@ a img{
 
 @media (max-width: 1200px){
     .skills{
-        height: 1100px;
+        height: 1050px;
     }
     .skillsContent{
         max-width: 450px;

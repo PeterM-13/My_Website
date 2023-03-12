@@ -15,7 +15,7 @@
  }
 
 body{
-    background: black;
+    background: rgb(13, 13, 13);
     min-width: 690px;
     display: flex;
     justify-content: flex-start;
