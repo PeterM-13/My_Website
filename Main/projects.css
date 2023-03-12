@@ -71,7 +71,6 @@ iframe{
     height: 100%;
 }
 
-
 h4{
     margin-bottom: 5px;
     font-weight: normal;
@@ -80,36 +79,39 @@ h4{
 .arrow{
     /*border-width: 0;
     background-color: rgb(45, 45, 45);*/
-
     border: 5px solid black;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: rgba(255, 255, 255, 0);
     
     border-radius: 50%;
     height: 75px;
     width: 75px;
-    padding: 15px;
-    filter: drop-shadow(0px 0px 8px rgba(255, 255, 255, 0.9));
+    padding: 10px;
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
     transition: 0.5s;
-
+    box-shadow: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.arrow img{
+    box-shadow: none;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    /*opacity: 0.7;*/
+    transition: 0.5s;
+    filter: drop-shadow(-2px 0px 5px rgba(255, 255, 255, 0.3));
+}
+.arrow:hover img{
+    cursor: pointer;
+    transition: 0.5s;
+    /*scale: 0.35;*/
+}
 .arrow:hover{
     cursor: pointer;
 }
-.arrow img{
-    scale: 0.3;
-    opacity: 0.8;
-    transition: 0.5s;
-}
-.arrow:hover img{
-    transition: 0.5s;
-    scale: 0.35;
-    /*filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.55));*/
-}
 .arrow:active img{
-    transform: translateX(-12px);
+    transform: translateX(-10px);
     transition: 0.22s;
 }
 #rightArrow{

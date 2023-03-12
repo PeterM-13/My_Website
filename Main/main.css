@@ -24,11 +24,7 @@ body{
 }
 
 section{
-    /*padding-left: 20%;
-    padding-right: 20%;*/
 
-    /*margin: 0 auto;
-    width: 60%;*/
 }
 
 h2{
@@ -38,5 +34,6 @@ h2{
 }
 
 a{
-    color: rgb(0, 200, 255);
+    /*color: rgb(0, 200, 255);*/
+    color: #6183ff;
 }

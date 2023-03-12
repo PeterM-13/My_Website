@@ -2,23 +2,11 @@ const projects = document.querySelectorAll(".project").length;
 let scrollDist;
 let scrollMax;
 
-let arrowFlag = true;
 checkSize();
-arrowFlag = false;
-let interval = setInterval(async()=>{
-    document.querySelector("#rightArrow").style.scale = "0.37";//1.15
-    await new Promise(r => setTimeout(r, 300));
-    document.querySelector("#rightArrow").style.scale = "0.3";
-}, 4000)
 
 function checkSize(){
     scrollDist =((window.innerWidth > 1200)? 1000:500);
     scrollMax = projects * scrollDist;
-
-    if (!arrowFlag){
-        clearInterval(interval);
-        arrowFlag = true;
-    }
 }
 
 document.querySelectorAll(".arrow")[0].addEventListener("click", leftClick);
