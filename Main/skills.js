@@ -78,3 +78,16 @@ for(icon of document.querySelectorAll(".interestIcon")){
     icon.addEventListener("mouseover", ()=>{changeContentI(id);showI()})
     icon.addEventListener("mouseleave", ()=>{hideI()})
 }
+
+
+
+//window.addEventListener('resize', ()=>{
+if(window.innerWidth < 1200){
+    for(icon of document.querySelectorAll(".iconLink")){
+            icon.style.display = "none"
+    }
+}else{
+    for(icon of document.querySelectorAll(".icon")){
+        icon.style.display = "none"
+    }
+}
