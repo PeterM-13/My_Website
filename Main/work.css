@@ -87,7 +87,6 @@
     flex-direction: column;
     align-items: center;
 }
-
 .workContent2{
     max-width: 50rem;
     width: 100%;
@@ -115,7 +114,6 @@
     top: -17px;
     right: -1px;
 }
-
 
 
 @media (max-width: 1200px){

@@ -1,14 +1,12 @@
 :root{
-    /* 
-:root is where you declare and initialize global vars that you can 
-reuse throughout your stylesheet */
+
 }
 
 * {
     margin: 0px;
     padding: 0px;
     
-    font-family: 'Inter';
+    font-family: 'Inter', 'Arial', sans-serif;
     font-style: normal;
     color: #FFFFFF;
     font-size: 18px;
