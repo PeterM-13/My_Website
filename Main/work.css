@@ -42,11 +42,13 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    position: relative;
 }
 .workLogo{
     width: 100%;
     height: auto;
     border-radius: 28%;
+    z-index: 9;
 }
 .workLine{
     background-color: white;
@@ -116,6 +118,78 @@
     right: -1px;
 }
 
+.workInfo p{
+   color: black;
+    margin-right: 12px;
+    opacity: 0;
+    transition: 0.75s;
+}
+.workInfo{
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100px;
+    width: 0px;
+    height: 96px;
+    padding: 12px;
+    padding-left: 112px;
+    opacity: 0;
+    left: 0px;
+    top: 0px;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    display: flex;
+    align-items: center;
+}
+#postOffice:hover .workInfo{
+    transition: 0.75s;
+    opacity: 1;
+    width: 190px;
+}
+#postOffice:hover #postOfficeInfo{
+    transition: 0.75s;
+    transition-delay: 0.4s;
+    opacity: 1;
+}
+#wood:hover .workInfo{
+    transition: 0.75s;
+    opacity: 1;
+    width: 190px;
+}
+#wood:hover #woodInfo{
+    transition: 0.75s;
+    transition-delay: 0.6s;
+    opacity: 1;
+}
+#leonardo:hover .workInfo{
+    transition: 0.75s;
+    opacity: 1;
+    width: 190px;
+}
+#leonardo:hover #leonardoInfo{
+    transition: 0.75s;
+    transition-delay: 0.5s;
+    opacity: 1;
+}
+#bsi:hover .workInfo{
+    transition: 0.75s;
+    opacity: 1;
+    width: 190px;
+}
+#bsi:hover #bsiInfo{
+    transition: 0.75s;
+    transition-delay: 0.6s;
+    opacity: 1;
+}
+#resonate:hover .workInfo{
+    transition: 0.75s;
+    opacity: 1;
+    width: 190px;
+}
+#resonate:hover #resonateInfo{
+    transition: 0.75s;
+    transition-delay: 0.6s;
+    opacity: 1;
+}
 
 @media (max-width: 1200px){
     .workContent1{
@@ -130,11 +204,15 @@
         height: 80px;
         border-radius: 50%;
         padding: 12px;
+        cursor: auto;
     }
     .workDate{
         width: 80px;
     }
     .workPlace{
         width: 90px;
+    }
+    .workInfo{
+        display: none;
     }
 }
