@@ -57,7 +57,7 @@ h1{
     height: 250px;
 }
 .headerRight img{
-    width: auto;
+    width: 232px;
     height: 232px;
     margin-right: 4px;
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
@@ -69,6 +69,12 @@ h1{
     background-color: rgba(255, 255, 255, 0.115);
     padding-top: 10px;
     padding-right: 8px;
+    transition: 2s;
+}
+.headerRight img:active{
+    transition: 1s;
+    rotate: 360deg;
+    cursor: wait;
 }
 
 

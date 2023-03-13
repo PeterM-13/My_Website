@@ -28,7 +28,7 @@
     width: auto;
     object-fit: cover;
     transition: 1s;
-    cursor: help;
+    /*cursor: help;*/
 }
 #RESTapi{
     width: 75px;
@@ -41,7 +41,7 @@
     height: 100px;
     width: auto;
     object-fit: cover;
-    cursor: help;
+    /*cursor: help;*/
 }
 #interestsTitle{
     margin-top: 4rem;
@@ -81,7 +81,6 @@ strong{
 a img{
     cursor: pointer!important;
 }
-
 
 @media (max-width: 1200px){
     .skills{

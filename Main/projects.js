@@ -49,7 +49,6 @@ function rightClick(){
 //document.querySelector('.projectsContainer').addEventListener("scroll", function(e){console.log(e.target.scrollLeft)})
 let scrollsPassed = 0;
 setInterval(()=>{
-    console.log(clickCount)
     if(clickCount == 0){
         clickCount -= 1;
         rightClick();
