@@ -58,11 +58,17 @@ h1{
 }
 .headerRight img{
     width: auto;
-    height: 250px;
+    height: 232px;
     margin-right: 4px;
-    filter: drop-shadow(0px 3px 5px rgba(255, 255, 255, 0.5));
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
     transform: matrix(-1, 0, 0, 1, 0, 0);
     opacity: .72;
+
+    border-radius: 50%;
+    border: 5px solid rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.115);
+    padding-top: 10px;
+    padding-right: 8px;
 }
 
 

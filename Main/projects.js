@@ -59,4 +59,4 @@ setInterval(()=>{
             clickCount = 0;
         }
     }
-}, 8000)
+}, 9000)
