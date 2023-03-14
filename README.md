@@ -4,6 +4,4 @@ Fun weekend project, re-working my website (the old one @https://peter-metcalfe.
 
 Alot of HTML and A LOT of CSS!
 
-Leant lots.
-
 Was good fun. Highly recommend.
