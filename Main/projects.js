@@ -56,6 +56,7 @@ setInterval(()=>{
         scrollsPassed ++;
         if(scrollsPassed > 4){
             clickCount = 0;
+            scrollsPassed = 0
         }
     }
 }, 9000)
