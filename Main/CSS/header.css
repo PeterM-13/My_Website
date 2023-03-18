@@ -69,12 +69,12 @@ h1{
     background-color: rgba(255, 255, 255, 0.115);
     padding-top: 10px;
     padding-right: 8px;
-    transition: 2s;
+    transition: 1.6s;
 }
 .headerRight img:active{
     transition: 1s;
     rotate: 360deg;
-    cursor: wait;
+    /*cursor: wait;*/
 }
 
 
