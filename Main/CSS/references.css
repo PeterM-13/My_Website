@@ -97,4 +97,7 @@ span strong{
     .referencesBlock{
         max-width: 450px;
     }
+    #referencesRight{
+        margin-bottom: 9rem; /* Remove this when showing CV */
+    }
 }
