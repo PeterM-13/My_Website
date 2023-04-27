@@ -15,6 +15,11 @@ document.querySelectorAll(".arrow")[1].addEventListener("click", rightClick);
 
 document.querySelector('.projectsContainer').scrollLeft = scrollDist;
 
+const allProjectsBtn = document.getElementById("allProjects");
+allProjectsBtn.addEventListener("click", () => {
+  window.location.href = "./AllProjects";
+});
+
 function leftClick(){
     checkSize();
     let pos = document.querySelector('.projectsContainer').scrollLeft;
@@ -59,4 +64,4 @@ setInterval(()=>{
             scrollsPassed = 0
         }
     }
-}, 9000)
+}, 11000)

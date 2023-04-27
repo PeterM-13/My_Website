@@ -1,0 +1,208 @@
+:root{
+    color-scheme: dark;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+    
+    font-family: 'Inter', 'Arial', sans-serif;
+    font-style: normal;
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 25px;
+ }
+ body{
+    background: rgb(20, 20, 20);
+    min-width: 690px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow-y: scroll;
+    position: relative;
+}
+h1{
+    font-size: 75px;
+    font-weight: 400;
+    text-align: left;
+    max-width: 50rem;
+    width: 100%;
+}
+h2{
+    font-weight: 400;
+    font-size: 32px;
+    text-align: left;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+h3{
+    text-align: left;
+    font-weight: 400;
+    font-size: 20px;
+    padding-bottom: 0.8rem;
+    padding-top: 0.5rem;
+    padding-left: 0.2rem;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 8rem;
+    z-index: 1;
+}
+#header{
+    background-image: linear-gradient(180deg, #2f5cffe7 0%, rgba(0, 56, 255, 0) 100%);
+    /*background-image: linear-gradient(180deg, #2f5cffc0 0%, rgb(13, 13, 13, 1) 100%), url("../images/BG.jpg");
+    background-position: center;*/
+    height: 20rem;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#headerInfo{
+    width: 100%;
+    max-width: 50rem;
+}
+.yeah{
+    max-width: 50rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.projectsContainer{
+    max-width: 50rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 0rem 1rem;
+    /*gap: 1rem, 0.4rem;*/
+}
+.project{
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
+    background-color: rgba(14, 14, 14, 0.8);
+    padding: 0.35rem;
+    border-radius: 10px;
+    width: 275px;
+    height: 248px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;   
+    transition: 0.25s;
+    position: relative;
+}
+.project:hover{
+    filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.8));
+    transition: 0.7s;
+}
+.projectInfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    display: none;
+}
+img{
+    border-radius: 2px 2px 10px 10px;
+    max-width: 300px;
+    height: 200px;
+    width: auto;
+    object-fit: cover;
+    /*object-fit: scale-down;*/
+    transition: 0.5s;
+
+}
+#infoP{
+    /*word-break: break-all;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.4rem;
+}
+.summaryButton{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("./images/angle-down.svg");
+    transform: rotate('-90deg');
+    filter: invert(100%);
+    height: 22px;
+    width: 20px;
+    margin: 16px;
+    border: 0;
+    transition: transform 0.75s cubic-bezier(0.22, 1, 0.22, 1);
+}
+.summaryButton:hover{
+    cursor: pointer;
+}
+a{
+    color: #7998ff;
+}
+#BGmiddle{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0), #ffffff7a, rgba(255, 255, 255, 0));
+    height: 50rem;
+    position: absolute;
+    top: 143.5rem;
+    left: 0;
+    right: 0;
+    z-index: 0;  
+}
+#footer{
+    background: linear-gradient(180deg, rgba(0, 56, 255, 0) 0%, #2f5cffc2 100%);
+    height: 43rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+}
+
+@media (max-width: 1200px){
+    #headerInfo{
+        max-width: 450px;
+    }
+    h1{
+        max-width: 450px;
+    }
+    h3{
+        font-weight: 400;
+        font-size: 15px;
+        padding-bottom: 0.4rem;
+        padding-top: 0.3rem;
+    }
+    .yeah{
+        max-width: 450px;
+    }
+    .projectsContainer{
+        max-width: 450px;
+    }
+    .project{
+        width: 200px;
+        height: 198px;
+        margin-bottom: 1rem;
+        padding: 0.3rem;
+    }
+    img{
+        max-width: 200px;
+        height: 158px;
+    }
+    #infoP{
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .summaryButton{
+        height: 18px;
+        width: 16px;
+        margin-top: 15px;
+        margin-right: 9px;
+    }
+    #BGmiddle{
+        top: 175.5rem;
+    }
+}
