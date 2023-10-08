@@ -2,9 +2,12 @@
 const PROJECTS = { 
     2023: [
         {name:"Movie Website", date:"14/02/23", images:["Movie Website 1.jpeg","Movie Website 2.jpeg","Movie Website 3.png"], info:"Named 'Movieter', I made a site to browse and watch movies using a free API"},
-        {name:"This Website", date:"8/03/22", images:["My Website 1.jpeg","My Website 2.jpeg","My Website 3.jpeg"], info:"I designed and built this website as a portfolio"},
+        {name:"This Website", date:"8/03/23", images:["My Website 1.jpeg","My Website 2.jpeg","My Website 3.jpeg"], info:"I designed and built this website as a portfolio"},
         //{name:"Smart Walking Stick", date:"28/03/22", images:["Walking Stick.png"], info:""},
-        {name:"Leonardo Balsa 'Glider'", date:"14/04/22", images:["Leonardo Frizbee 1.jpeg","Leonardo Frizbee 2.jpeg","Leonardo Frizbee 3.jpeg"], info:"I won a glider competition, working at Leonardo, by making a 'glider' with more of a frizbee design 😄"},
+        {name:"Leonardo Balsa 'Glider'", date:"14/04/23", images:["Leonardo Frizbee 1.jpeg","Leonardo Frizbee 2.jpeg","Leonardo Frizbee 3.jpeg","Leonardo Frizbee 4.jpeg"], info:"I won a glider competition, working at Leonardo, by making a 'glider' with more of a frizbee design 😄"},
+        {name:"3D Packman", date:"11/06/23", images:["Packman1.jpeg","Packman2.jpeg","Packman3.jpeg","Packman4.jpeg","Packman5.jpeg","Packman6.jpeg","Packman7.jpeg","Packman8.jpeg"], info:"I re-created packman in 3D from a first person perspective for extra suspense"},
+        {name:"Rampaging Chariot", date:"16/06/23", images:["Chariot1.jpeg","Chariot2.jpeg","Chariot3.jpeg","Chariot4.jpeg","Chariot5.jpeg","Chariot6.jpeg"], info:"Worked in a team of appprentices to build a chariot for Leonardo's event"},
+        {name:"Smart Walking Stick", date:"31/01/23 - 29/09/23", images:["StepSmart1.PNG","StepSmart2.jpg","StepSmart3.jpeg","StepSmart4.jpg","StepSmart5.jpg","StepSmart6.jpg","StepSmart7.jpg","StepSmart8.jpg","StepSmart9.jpeg"], info:"Led team to vicotry, making a smart walking stick in IMechE automation challenge. Got fall detection, torch, app & more."},
     ],
     2022: [
         {name:"Rain Simulator", date:"09/01/22", images:["Rain Sim 1.jpg","Rain Sim 2.jpeg","Rain Sim 3.jpeg","Rain Sim 4.jpeg"], info:"Allows you to experiment with different velocities and angles to find out if you stay dryer by running or walking in the rain"},
@@ -45,21 +48,37 @@ const PROJECTS = {
         {name:"Torch", date:"27/12/20", images:["Torch 1.jpeg","Torch 2.jpeg","Torch 3.jpeg","Torch 4.jpeg"], info:"Multi-colour, 3D printed torch"},
     ],
     2019: [
-        {name:"Infinity Mirror", date:"20/01/19", images:["Infinity Mirror 1.jpeg","Infinity Mirror 2.jpeg","Infinity Mirror 3.jpeg"], info:"Mirror that appears to go on forever by using special mirrors to trap the light"},
-        {name:"Bluetooth Speaker", date:"01/02/19", images:["Bluetooth Speaker 1.jpeg","Bluetooth Speaker 2.jpeg","Bluetooth Speaker 3.jpeg","Bluetooth Speaker 4.jpeg","Bluetooth Speaker 5.jpeg"], info:"School DT project; Bluetooth speaker with flashing ring of LED lights"},
+        {name:"Desk Shelves", date:"13/01/19", images:["Shelves 1.jpeg","Shelves 2.jpeg","Shelves 3.jpeg","Shelves 4.jpeg","Shelves 5.jpeg"], info:"I made some MDF shelves to help organise my desk"},
+        {name:"Infinity Mirror", date:"20/01/19", images:["Infinity Mirror 1.jpeg","Infinity Mirror 2.jpeg","Infinity Mirror 3.jpeg","Infinity Mirror 4.jpeg"], info:"Mirror that appears to go on forever by using special mirrors to trap the light"},
+        {name:"Crystals", date:"27/01/19", images:["Crystals 1.jpeg","Crystals 2.jpeg","Crystals 3.jpeg","Crystals 4.jpeg","Crystals 5.jpeg"], info:"Sparkly blue crystals made with potassium aluminium sulfate & blue food dye"},
+        {name:"DT Crane Competition", date:"04/02/19", images:["Crane 1.jpeg","Crane 2.jpeg","Crane 3.jpeg","Crane 4.jpeg"], info:"Represented my school in DT competiotion. Were tasked with building a crane and our team won!"},
         {name:"Night Light", date:"17/03/19", images:["Night Light 1.jpeg","Night Light 2.jpeg","Night Light 3.jpeg"], info:"Colour changing night light uses LDR to detect when dark and automatically turns on"},
         {name:"Hydrogen Generator V1", date:"22/04/19", images:["Hydrogen Generator V1 1.jpeg","Hydrogen Generator V1 2.jpeg","Hydrogen Generator V1 3.jpeg"], info:"This is version 1, my first time making hydrogen with the electrolysis process"},
         {name:"Vacuum Chamber", date:"28/04/19", images:["Vacuum Chamber 1.jpeg","Vacuum Chamber 2.jpeg","Vacuum Chamber 3.jpeg"], info:"I made this little vacuum chamber to experiment with; the low pressure makes marshmallows grow & water boil"},
-        //{name:"Mould", date:"21/06/19", images:["Mould.jpeg"], info:""},
-        {name:"Hydrogen Rocket", date:"30/06/19", images:["Rocket 1.jpeg","Rocket 2.jpeg"], info:"Simple bottle rocket filled with hydrogen, goes up with a bang!"},
+        //{name:"5s Rule Experiment", date:"21/06/19", images:["Mould.jpeg"], info:"Science experiment to test the 5 second rule. Turns out there is some truth behind it"},
+        {name:"Hydrogen Rocket", date:"30/06/19", images:["Rocket 1.jpeg","Rocket 2.jpeg","Rocket 3.jpeg","Rocket 4.jpeg"], info:"Simple bottle rocket filled with hydrogen, goes up with a bang!"},
         {name:"Hydrogen Generator V2", date:"05/07/19", images:["Hydrogen Generator V2 1.jpeg","Hydrogen Generator V2 2.jpeg","Hydrogen Generator V2 3.jpeg"], info:"Generates more hydrogen!"},
         {name:"Potato Cannon 1", date:"06/07/19", images:["Potato Cannon 1 1.jpeg","Potato Cannon 1 2.jpeg","Potato Cannon 1 3.jpeg","Potato Cannon 1 4.jpeg","Potato Cannon 1 5.jpeg","Potato Cannon 1 6.jpeg","Potato Cannon 1 7.jpeg","Potato Cannon 1 8.jpeg"], info:"Hydrogen-powered cannon, very explosive!"},
         {name:"Hovercraft", date:"16/08/19", images:["Hover Craft.jpeg"], info:"Used some old drone motors to make this hovercraft"},
         {name:"Bird House", date:"17/10/19", images:["Bird House 1.jpeg","Bird House 2.jpeg"], info:"I made a luxary bird house & can confirm it has had visitors"},
+        {name:"Bluetooth Speaker", date:"26/10/19", images:["Bluetooth Speaker 1.jpeg","Bluetooth Speaker 2.jpeg","Bluetooth Speaker 3.jpeg","Bluetooth Speaker 4.jpeg","Bluetooth Speaker 5.jpeg"], info:"School DT project; Bluetooth speaker with flashing ring of LED lights"},
         {name:"Hydrogen Generator V3", date:"01/11/19", images:["Hydrogen Generator V3 1.jpeg","Hydrogen Generator V3 2.jpeg","Hydrogen Generator V3 3.jpeg","Hydrogen Generator V3 4.jpeg","Hydrogen Generator V3 5.jpeg"], info:"Uses electrolysis the generate hydrogen, by splitting (water) H2O into H & O2"},
         {name:"Potato Cannon 2", date:"03/11/19", images:["Potato Cannon 2 1.jpeg","Potato Cannon 2 2.jpeg","Potato Cannon 2 3.jpeg","Potato Cannon 2 4.jpeg"], info:"This shot a tennis ball 200m!"},
-    ]
+        // {name:"Newton's Cradle", date:"22/05/19", images:[""], info:""},
+    ],
+    2018: [
+        {name:"Christmas Decorations", date:"22/12/18", images:["Ballball 1.jpeg","Ballball 2.jpeg","Ballball 3.jpeg","Ballball 4.jpeg","Ballball 5.jpeg"], info:"Designed & laser cut these christmas tree decorations"},
+        {name:"Hydrogen Reaction", date:"26/10/18", images:["Hydrogen 1.jpeg","Hydrogen 2.jpeg","Hydrogen 3.jpeg","Hydrogen 4.jpeg","Hydrogen 5.jpeg","Hydrogen 6.jpeg"], info:"Recting alluminium with sodium hydroxide to produce hydrogen"},
+        {name:"Cross-Stitch Sewing", date:"01/04/18", images:["Sewing 1.jpeg","Sewing 2.jpeg","Sewing 3.jpeg","Sewing 4.jpeg","Sewing 5.jpeg","Sewing 6.jpeg","Sewing 7.jpeg","Sewing 8.jpeg","Sewing 9.jpeg","Sewing 10.jpeg"], info:"Sewing cross-stitch, each one takes about 4~6hrs"},
+    ],
+    2017: [
+        {name:"Gallium", date:"29/01/17", images:["Gallium 1.jpeg","Gallium 2.jpeg","Gallium 3.jpeg"], info:"Got my hands on some gallium which is a metal that melts at room temperature"},
+        {name:"Origami", date:"17/11/17", images:["Origami 1.jpeg","Origami 2.jpeg","Origami 3.jpeg","Origami 4.jpeg","Origami 5.jpeg","Origami 6.jpeg","Origami 7.jpeg","Origami 8.jpeg","Origami 9.jpeg","Origami 10.jpeg","Origami 11.jpeg"], info:"The art of folding paper..."},
+        {name:"Scissor Arm", date:"23/11/17", images:["Arm 1.jpeg","Arm 3.jpeg","Arm 4.jpeg","Arm 5.jpeg"], info:"Extendable scissor arm to get things out of reach"},
+        //{name:"USB Desk Light", date:"03/11/17", images:["Scissor Arm 1.jpeg","Scissor Arm 2.jpeg"], info:"Small USB light for the desk"},
+    ],
 }
+
 
 
 function addProjects(year){    
@@ -125,6 +144,8 @@ addProjects(2022);
 addProjects(2021);
 addProjects(2020);
 addProjects(2019);
+addProjects(2018);
+addProjects(2017);
 
 const projects = document.querySelectorAll('.project');
 projects.forEach(project => {
@@ -157,4 +178,14 @@ projects.forEach(project => {
         image.src =  pathStart + PROJECTS[year][projectIndex].images[imgIndex];
         project.querySelector('img').alt = imgIndex.toString();
     });
+});
+
+
+if (location.protocol !== "https:") {
+    //location.protocol = "https:";
+}
+
+const backBtn = document.getElementById("backButton");
+backBtn.addEventListener("click", () => {
+  window.location.href = "../";
 });

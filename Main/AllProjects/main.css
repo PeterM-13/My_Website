@@ -47,7 +47,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-bottom: 8rem;
+    padding-bottom: 1.5rem;
     z-index: 1;
 }
 #header{
@@ -162,6 +162,26 @@ a{
     right: 0;
     z-index: 0;
 }
+#backButton{
+    margin-top: 7rem;
+    width: 8rem;
+    height: 2.8rem;
+    border: 5px solid black;
+    background-color: rgba(255, 255, 255, 0);
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.7));
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.868);
+    transition: 0.25s;
+}
+#backButton:hover{
+    filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.9));
+    transition: 0.3s;
+}
+#backButton:active{
+    scale: 0.97;
+    transition: 0.25s;
+}
+
 
 @media (max-width: 1200px){
     #headerInfo{
