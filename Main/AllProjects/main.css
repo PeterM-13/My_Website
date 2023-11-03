@@ -44,6 +44,11 @@ h3{
     transition: opacity 0.2s;
     white-space: nowrap;
     overflow: hidden;
+    cursor: pointer;
+    transition: 0.1s;
+}
+h3:hover{
+    filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
 }
 
 #header{
@@ -125,6 +130,7 @@ main{
     flex-direction: row;
     justify-content: flex-start;
     gap: 0rem 1rem;
+    position: relative;
     /*gap: 1rem, 0.4rem;*/
 }
 .project{
@@ -141,6 +147,17 @@ main{
     transition: 0.5s;
     position: relative;
     opacity: 1;
+}
+.project.clicked{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 550px;
+    height: 450px;
+    padding: 0.5rem;
+    z-index: 2;
+    background-color: rgba(14, 14, 14, 0.95);
 }
 .project.filtered{
     width: 0px;
@@ -169,6 +186,10 @@ img{
     object-fit: cover;
     /*object-fit: scale-down;*/
     transition: 0.3s;
+}
+img.clicked{
+    max-width: 600px;
+    height: 400px;
 }
 #infoP{
     /*word-break: break-all;*/

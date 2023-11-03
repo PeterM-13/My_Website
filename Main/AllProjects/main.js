@@ -8,7 +8,7 @@ const PROJECTS = {
         {name:"Rampaging Chariot", date:"16/06/23", images:["Chariot1.jpeg","Chariot2.jpeg","Chariot3.jpeg","Chariot4.jpeg","Chariot5.jpeg","Chariot6.jpeg"], info:"Worked in a team of appprentices to build a chariot for Leonardo's event", keyWords:['software','electrical','mechanical','team','award']},
         {name:"Smart Walking Stick", date:"31/01/23 - 29/09/23", images:["StepSmart1.PNG","StepSmart2.jpg","StepSmart3.jpeg","StepSmart4.jpg","StepSmart5.jpg","StepSmart6.jpg","StepSmart7.jpg","StepSmart8.jpg","StepSmart9.jpeg"], info:"Led team to vicotry, making a smart walking stick in IMechE automation challenge. Got fall detection, torch, app & <a target='_blank' href='https://youtu.be/iHIE9UCjryk'>more</a>", keyWords:['software','electrical','mechanical','invention','team','award']},
         {name:"Conway's Game of Life", date:"12/10/23", images:["Conway 1.jpeg","Conway 2.jpeg","Conway 3.jpeg","Conway 4.jpeg"], info:"Re-created the game (with smiley faces) as a coding challenge. Simulates cellular life, <a target='_blank' href='https://youtu.be/s4DJEKRyq6w'>see my video</a>", keyWords:['software']},
-        {name:"Useless Box", date:"30/11/23", images:["Conway 1.jpeg"], info:"This box won't let you switch it off. Servos are used to switch the box off if you turn it on - that's all it does 😆", keyWords:['software','mechanical','electrical']},
+        {name:"Useless Box", date:"30/11/23", images:["UBox 2.jpeg","UBox 3.jpeg","UBox 4.jpeg"], info:"This box won't let you switch it off. Servos are used to switch the box off if you turn it on - that's all it does 😆", keyWords:['software','mechanical','electrical']},
     ],
     2022: [
         {name:"Rain Simulator", date:"09/01/22", images:["Rain Sim 1.jpg","Rain Sim 2.jpeg","Rain Sim 3.jpeg","Rain Sim 4.jpeg"], info:"Allows you to experiment with different velocities and angles to find out if you stay dryer by running or walking in the rain", keyWords:['software']},
@@ -290,6 +290,34 @@ function applyFilters() {
     });   
 }
 
+
+const projectTitles = document.querySelectorAll('h3');
+projectTitles.forEach((projectTitle, index) => {
+    projectTitle.addEventListener('click', ()=>{
+        const parentProject = projectTitle.closest('.project');
+        if (parentProject) {
+            const imgElement = parentProject.querySelector('img');
+
+            const isClicked = parentProject.classList.contains('clicked');
+
+            const clickedProjects = document.querySelectorAll('.project.clicked');
+            clickedProjects.forEach(clickedProject => {
+                clickedProject.classList.remove('clicked');
+                const img = clickedProject.querySelector('img');
+                if (img) {
+                    img.classList.remove('clicked');
+                }
+            });
+
+            if (!isClicked) {
+                parentProject.classList.add('clicked');
+                if (imgElement) {
+                    imgElement.classList.add('clicked');
+                }
+            }
+        }
+    })
+})
 
 
 if (location.protocol !== "https:") {
