@@ -1,6 +1,6 @@
 .references{
     background: linear-gradient(180deg, rgba(0, 56, 255, 0) 0%, #2f5cff 100%);
-    height: 43rem;
+    height: 45rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -28,7 +28,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 450px;
+    height: 625px;
     gap: 20px;
 }
 .reference{
@@ -85,7 +85,7 @@ span strong{
 
 @media (max-width: 1200px){
     .references{
-        height: 73rem;
+        height: 86rem;
     }
     .referencesContent{
         max-width: 450px;
@@ -99,5 +99,6 @@ span strong{
     }
     #referencesRight{
         margin-bottom: 9rem; /* Remove this when showing CV */
+        padding-left: 0px;
     }
 }

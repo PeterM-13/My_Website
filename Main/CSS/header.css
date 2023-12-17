@@ -76,6 +76,9 @@ h1{
     rotate: 360deg;
     /*cursor: wait;*/
 }
+.headerRight img:hover{
+    cursor: pointer;
+}
 
 
 @media (max-width: 1200px){
