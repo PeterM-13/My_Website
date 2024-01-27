@@ -19,6 +19,7 @@ const skillInfo = {
     Postman: " > An API Platform for developers to design, build, test and iterate their APIs",
     "Postgress SQL": " > A Free and open-source relational database management system and SQL compliance",
     "RESTful API": " > An interface that computers use to exchange information securely over the internet",
+    Arduino: " > An open-source electronics platform based on easy-to-use hardware and software",
     Blender: " > A free and open-source 3D computer graphics software tool set",
     "Fusion 360": " > A commercial computer-aided design software application"
 }
