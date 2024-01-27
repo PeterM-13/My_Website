@@ -137,7 +137,7 @@ main{
     filter: drop-shadow(0px 0px 5px rgba(255, 255, 255, 0.5));
     background-color: rgba(14, 14, 14, 0.8);
     padding: 0.35rem;
-    border-radius: 10px;
+    border-radius: 12px;
     width: 275px;
     height: 248px;
     display: flex;
@@ -179,7 +179,7 @@ main{
     display: none;
 }
 img{
-    border-radius: 2px 2px 10px 10px;
+    border-radius: 2px 2px 8px 8px;
     max-width: 300px;
     height: 200px;
     width: auto;
@@ -286,6 +286,10 @@ a{
         margin-bottom: 1rem;
         padding: 0.3rem;
     }
+    .project.clicked{
+        width: 550px;
+        height: 442px;
+    }
     img{
         max-width: 200px;
         height: 158px;
@@ -298,7 +302,7 @@ a{
         height: 18px;
         width: 16px;
         margin-top: 15px;
-        margin-right: 9px;
+        margin-right: 10px;
     }
     #BGmiddle{
         top: 175.5rem;
