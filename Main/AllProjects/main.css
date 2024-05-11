@@ -236,8 +236,10 @@ a{
     right: 0;
     z-index: 0;
 }
-#backButton{
+.Button{
     margin-top: 7rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     width: 8rem;
     height: 2.8rem;
     border: 5px solid black;
@@ -247,12 +249,12 @@ a{
     color: rgba(255, 255, 255, 0.868);
     transition: 0.25s;
 }
-#backButton:hover{
+.Button:hover{
     filter: drop-shadow(0px 0px 6px rgba(255, 255, 255, 0.9));
     transition: 0.3s;
     cursor: pointer;
 }
-#backButton:active{
+.Button:active{
     scale: 0.97;
     transition: 0.25s;
 }

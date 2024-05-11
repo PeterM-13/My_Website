@@ -1,11 +1,15 @@
 //import PROJECTS from './Projects.json';
 const PROJECTS = { 
+    2024: [
+        {name:"Micro-Mouse Prototype", date:"20/3/24", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Working robotic mouse prototype that uses IR sensors to navigate through mazes", keyWords:['software','electrical','mechanical']},
+        {name:"Little Moo & Big Bully", date:"26/4/24", images:["Chariot 1.jpg","Chariot 2.png","Chariot 3.jpg","Chariot 4.jpg","Chariot 5.jpg","Chariot 6.jpg","Chariot 7.jpg","Chariot 8.jpg","Chariot 9.jpg","Chariot 10.jpg"], info:"The Appprentice Team I was in built these Rampaging Chariots for Leonardo's event, see <a target='_blank' href='https://youtu.be/nLV-coJIBKU'>here</a> or <a target='_blank' href='https://www.instagram.com/p/C6bNCHbsOvo/'>here</a>", keyWords:[,'electrical','mechanical','team']},
+    ],
     2023: [
         {name:"Movie Website", date:"14/02/23", images:["Movie Website 1.jpeg","Movie Website 2.jpeg","Movie Website 3.png"], info:"Named 'Movieter', I made a site to browse and watch movies using a free API", keyWords:['software']},
         {name:"This Website", date:"8/03/23", images:["My Website 1.jpeg","My Website 2.jpeg","My Website 3.jpeg"], info:"I designed and built this website as a portfolio", keyWords:['software']},
         {name:"Leonardo Balsa 'Glider'", date:"14/04/23", images:["Leonardo Frizbee 1.jpeg","Leonardo Frizbee 2.jpeg","Leonardo Frizbee 3.jpeg","Leonardo Frizbee 4.jpeg"], info:"I won a glider competition, working at Leonardo, by making a 'glider' with more of a frizbee design 😄", keyWords:['mechanical','award']},
         {name:"3D Packman", date:"11/06/23", images:["Packman1.jpeg","Packman2.jpeg","Packman3.jpeg","Packman4.jpeg","Packman5.jpeg","Packman6.jpeg","Packman7.jpeg","Packman8.jpeg"], info:"I re-created packman in 3D from a first person perspective for extra suspense", keyWords:['software']},
-        {name:"Rampaging Chariot", date:"16/06/23", images:["Chariot1.jpeg","Chariot2.jpeg","Chariot3.jpeg","Chariot4.jpeg","Chariot5.jpeg","Chariot6.jpeg"], info:"Worked in a team of appprentices to build a chariot for Leonardo's event", keyWords:['software','electrical','mechanical','team','award']},
+        {name:"Rampaging Chariot", date:"16/06/23", images:["Chariot1.jpeg","Chariot2.jpeg","Chariot3.jpeg","Chariot4.jpeg","Chariot5.jpeg","Chariot6.jpeg"], info:"Worked in a team of appprentices to build a chariot for Leonardo's event", keyWords:['software','electrical','mechanical','team']},
         {name:"Smart Walking Stick", date:"31/01/23 - 29/09/23", images:["StepSmart1.PNG","StepSmart2.jpg","StepSmart3.jpeg","StepSmart4.jpg","StepSmart5.jpg","StepSmart6.jpg","StepSmart7.jpg","StepSmart8.jpg","StepSmart9.jpeg"], info:"Led team to vicotry, making a smart walking stick in IMechE automation challenge. Got fall detection, torch, app & <a target='_blank' href='https://youtu.be/iHIE9UCjryk'>more</a>", keyWords:['software','electrical','mechanical','invention','team','award']},
         {name:"Conway's Game of Life", date:"12/10/23", images:["Conway 1.jpeg","Conway 2.jpeg","Conway 3.jpeg","Conway 4.jpeg"], info:"Re-created the game (with smiley faces) as a coding challenge. Simulates cellular life, <a target='_blank' href='https://youtu.be/s4DJEKRyq6w'>see my video</a>", keyWords:['software']},
         {name:"Useless Box", date:"30/11/23", images:["UBox 1.jpeg","UBox 2.jpeg","UBox 3.jpeg","UBox 4.jpeg","UBox 5.jpeg"], info:"This box won't let you switch it off. Servos are used to switch the box off if you turn it on - that's all it does, <a target='_blank' href='https://youtu.be/qVN5IE1tdXc'>see here</a>", keyWords:['software','mechanical','electrical']},
@@ -186,6 +190,7 @@ function addProject(project){
     projectsContainer.appendChild(projectDiv);
 }
 
+addProjects(2024);
 addProjects(2023);
 addProjects(2022);
 addProjects(2021);
@@ -347,4 +352,10 @@ if (location.protocol !== "https:") {
 const backBtn = document.getElementById("backButton");
 backBtn.addEventListener("click", () => {
   window.location.href = "../";
+});
+
+const topBtn = document.getElementById("topButton");
+topBtn.addEventListener("click", () => {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 });
