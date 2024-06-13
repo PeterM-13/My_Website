@@ -3,6 +3,7 @@ const PROJECTS = {
     2024: [
         {name:"Micro-Mouse Prototype", date:"20/3/24", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Working robotic mouse prototype that uses IR sensors to navigate through mazes", keyWords:['software','electrical','mechanical']},
         {name:"Little Moo & Big Bully", date:"26/4/24", images:["Chariot 1.jpg","Chariot 2.png","Chariot 3.jpg","Chariot 4.jpg","Chariot 5.jpg","Chariot 6.jpg","Chariot 7.jpg","Chariot 8.jpg","Chariot 9.jpg","Chariot 10.jpg"], info:"The Appprentice Team I was in built these Rampaging Chariots for Leonardo's event, see <a target='_blank' href='https://youtu.be/nLV-coJIBKU'>here</a> or <a target='_blank' href='https://www.instagram.com/p/C6bNCHbsOvo/'>here</a>", keyWords:[,'electrical','mechanical','team']},
+        {name:"Leonardo Game", date:"25/5/24", images:["game1.jpeg","game2.jpeg","game3.jpeg","game4.jpeg","game5.jpeg","game6.jpeg","game7.jpeg","game8.jpeg","game9.jpeg","game10.jpeg"], info:"A mobile game of 'Higher or Lower' all about Leanardo. Players vote for their answer to score points", keyWords:['software']},
     ],
     2023: [
         {name:"Movie Website", date:"14/02/23", images:["Movie Website 1.jpeg","Movie Website 2.jpeg","Movie Website 3.png"], info:"Named 'Movieter', I made a site to browse and watch movies using a free API", keyWords:['software']},
