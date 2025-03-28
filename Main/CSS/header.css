@@ -67,12 +67,10 @@ h1{
     border-radius: 50%;
     border: 5px solid rgb(0, 0, 0);
     background-color: rgba(255, 255, 255, 0.115);
-    padding-top: 10px;
-    padding-right: 8px;
-    transition: 1.6s;
+    transition: 0.5s
 }
 .headerRight img:active{
-    transition: 1s;
+    transition: 1.5s;
     rotate: 360deg;
     /*cursor: wait;*/
 }
