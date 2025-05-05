@@ -1,8 +1,10 @@
 //import PROJECTS from './Projects.json';
 const PROJECTS = { 
     2025: [
-        {name:"Micro-Mouse Final", date:"28/2/24", images:["Mouse1.jpeg","Mouse2.jpeg","Mouse3.jpeg","Mouse4.jpeg","Mouse5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition, <a target='_blank' href='https://www.instagram.com/reel/DHLWK2mNXE-/'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
         {name:"DIY Oscilloscope", date:"8/2/25", images:["Scope1.jpeg","Scope2.jpeg","Scope3.jpeg"], info:"Home made oscilloscope, and custom adjustable stand", keyWords:['electrical']},
+        {name:"Micro-Mouse Final", date:"28/2/24", images:["Mouse1.jpeg","Mouse2.jpeg","Mouse3.jpeg","Mouse4.jpeg","Mouse5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition, <a target='_blank' href='https://www.instagram.com/reel/DHLWK2mNXE-/'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
+        {name:"Maagic Sticks", date:"18/4/25", images:["Sticks1.jpeg","Sticks2.jpeg","Sticks3.jpeg","Sticks4.jpeg"], info:"Magic sticks that spin forever!", keyWords:['electrical','mechanical']},
+        {name:"Robot Website", date:"2/5/25", images:["RCSite1.jpeg","RCSite2.jpeg","RCSite3.jpeg","RCSite4.jpeg"], info:"Site to help track schools building Rampaging Chariots", keyWords:['software']},
     ],
     2024: [
         {name:"Micro-Mouse Prototype", date:"20/3/24", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Working robotic mouse prototype with IR sensors to navigate mazes", keyWords:['software','electrical','mechanical']},
