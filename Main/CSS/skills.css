@@ -1,5 +1,5 @@
 .skills{
-    height: 34rem;
+    height: 40rem;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -85,7 +85,7 @@ a img{
 
 @media (max-width: 1200px){
     .skills{
-        height: 1050px;
+        height: 78rem;
     }
     .skillsContent{
         max-width: 450px;

@@ -85,7 +85,7 @@ span strong{
 
 @media (max-width: 1200px){
     .references{
-        height: 86rem;
+        height: 90rem;
     }
     .referencesContent{
         max-width: 450px;
