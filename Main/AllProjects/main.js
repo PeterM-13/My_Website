@@ -2,7 +2,10 @@
 const PROJECTS = { 
     2026: [
         {name:"AI Football", date:"18/3/26", images:["Football 1.png","Football 2.png","Football 3.png","Football 4.png","Football 5.png"], info:"Artificial intelligence learns to play football", keyWords:['software','electrical','mechanical','award','team']},
-        {name:"Micro-Mouse Final", date:"10/4/26", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition, <a target='_blank' href='https://www.linkedin.com/posts/peter-metcalfe-1me_micromouse-2026-at-leonardo-new-robots-new-ugcPost-7449409305688096768-9uiv'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
+        {name:"Micro-Mouse Final", date:"10/4/26", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition <a target='_blank' href='https://www.linkedin.com/posts/peter-metcalfe-1me_micromouse-2026-at-leonardo-new-robots-new-ugcPost-7449409305688096768-9uiv'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
+        {name:"Homemade Gunpowder", date:"9/5/26", images:["Gunpowder 1.jpeg","Gunpowder 2.jpeg","Gunpowder 3.jpeg", "Gunpowder 4.jpeg"], info:"Some backyard chemistry", keyWords:['science']},
+        {name:"Fake Bomb Game", date:"11/5/26", images:["Bomb 1.jpeg", "Bomb 2.jpeg"], info:"Bomb prop designed to scare, with motion sensitive countdown", keyWords:['software','electrical']},
+        {name:"Infrared Light Gate", date:"18/6/26", images:["LightGate 1.jpeg"], info:"Infrared timing gate built for a local school rocket car competition", keyWords:['software','electrical']},
     ],
     2025: [
         {name:"DIY Oscilloscope", date:"8/2/25", images:["Scope1.jpeg","Scope2.jpeg","Scope3.jpeg"], info:"Home made oscilloscope, and custom adjustable stand", keyWords:['electrical']},

@@ -626,8 +626,8 @@ a.icon-tile {
 /* Uniform white chip so every company logo renders at the same size */
 .logo-chip {
     flex-shrink: 0;
-    width: 42px;
-    height: 42px;
+    width: 52px;
+    height: 52px;
     background: #ffffff;
     border-radius: 10px;
     display: flex;

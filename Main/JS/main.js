@@ -101,8 +101,10 @@ const INTERESTS = [
     { name: "Electronics", icon: "soldering.png", desc: "Electronics often play a significant role in the projects I make" },
     { name: "Mechanical Work", icon: "tools.svg", desc: "I have access to a workshop of tools which I have learnt to use" },
     { name: "Programming", icon: "code2.png", desc: "My work and my hobby. From apps to games to websites, I enjoy it all, especially the <a href='https://sites.google.com/view/peters-maths-posters/home' target='_blank'>math</a>", url: "https://sites.google.com/view/peters-maths-posters/home" },
-    { name: "Badminton", icon: "badminton.svg", desc: "Keen badminton player, I play once a week at my local club" },
-    { name: "Cycling", icon: "cycling1.png", desc: "Enjoy biking off-road with friends, when the weather is good" },
+    { name: "Army Cadet Force", icon: "cadets.png", desc: "I volunteer with my local cadet detachment as an adult instructor" },
+    { name: "Badminton", icon: "badminton.svg", desc: "Keen badminton player, often play with friends" },
+    { name: "Rock Climbing", icon: "climbing.png", desc: "Keen rock climber, go at least once a week" },
+    { name: "Cycling", icon: "cycling1.png", desc: "Enjoy biking off-road when the weather is good" },
 ];
 
 // ============================================================
@@ -154,7 +156,7 @@ function renderIconGrid(items, gridId, infoId, iconPath) {
         tile.innerHTML = `<img src="${iconPath}${item.icon}" alt="${item.name}" title="${item.name}" loading="lazy">`;
         // Info text stays after the mouse leaves, so links inside it remain clickable
         tile.addEventListener('mouseenter', () => {
-            info.innerHTML = `<strong>${item.name}</strong>: ${item.desc}`;
+            info.innerHTML = `<strong>${item.name}:</strong> ${item.desc}`;
         });
         grid.appendChild(tile);
     });
