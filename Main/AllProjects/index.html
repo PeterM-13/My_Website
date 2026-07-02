@@ -1,97 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=0.5, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Every project Peter Metcalfe has built, from age 15 to now." />
 
     <title>Peter's Projects</title>
     <link rel="icon" type="image/png" href="images/P logo clear.png">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
-    <section id="header">
-        <h1>All Projects</h1>
-        <p id="headerInfo">See every project from aged 15 to now<br><br>Even more on <a href="https://www.instagram.com/peter_metcalfe_/" target="_blank">Instagram</a> and <a href="https://www.thingiverse.com/peter-metcalfe/designs" target="_blank">Thingiverse</a></p>
-        <div id="filters">
-            <button class="filter" id="softwareFilter">Software</button>
-            <button class="filter" id="electricalFilter">Electrical</button>
-            <button class="filter" id="mechanicalFilter">Mechanical</button>
-            <button class="filter" id="scienceFilter">Science</button>
-            <button class="filter" id="inventionFilter">Inventions</button>
-            <button class="filter" id="awardFilter">Award Winning</button>
-            <img id='filterIcon' src="./images/filter.png"/>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a class="logo" href="../">← Peter Metcalfe<span class="grad-text">.</span></a>
+            <div class="nav-right">
+                <a href="https://www.instagram.com/peter_metcalfe_/" target="_blank">Instagram</a>
+                <a href="https://www.thingiverse.com/peter-metcalfe/designs" target="_blank">Thingiverse</a>
+            </div>
         </div>
-    </section>
-    <main>
-        <section class="year">
-            <h2>2026 - Apprenticeship</h2>
-            <div class="projectsContainer" id="2026">
+    </nav>
 
-            </div>
-        </section>
-        <section class="year">
-            <h2>2025 - Apprenticeship</h2>
-            <div class="projectsContainer" id="2025">
+    <header class="page-header">
+        <h1>All <span class="grad-text">Projects</span></h1>
+        <p>Everything I've built from age 15 to now.<br>
+            Click a photo to view the full gallery.</p>
+    </header>
 
-            </div>
-        </section>
-        <section class="year">
-            <h2>2024 - Apprenticeship</h2>
-            <div class="projectsContainer" id="2024">
-
-            </div>
-        </section>
-        <section class="year">
-            <h2>2023 - Apprenticeship</h2>
-            <div class="projectsContainer" id="2023">
-
-            </div>
-        </section>
-        <section class="year">
-            <h2>2022 - Sixth Form</h2>
-            <div class="projectsContainer" id="2022">
-                
-            </div>
-        </section>
-        <section class="year">
-            <h2>2021 - Sixth Form</h2>
-            <div class="projectsContainer" id="2021">
-                
-            </div>
-        </section>
-        <section class="year">
-            <h2>2020 - GCSE</h2>
-            <div class="projectsContainer" id="2020">
-                
-            </div>
-        </section>
-        <section class="year">
-            <h2>2019 - GCSE</h2>
-            <div class="projectsContainer" id="2019">
-                
-            </div>
-        </section>
-        <section class="year">
-            <h2>2018 - GCSE</h2>
-            <div class="projectsContainer" id="2018">
-                
-            </div>
-        </section>
-        <section class="year">
-            <h2>2017 - GCSE</h2>
-            <div class="projectsContainer" id="2017">
-                
-            </div>
-        </section>
-        <div>
-            <button id="backButton" class="Button">Back to Home</button>
-            <button id="topButton" class="Button">Back to Top</button>
+    <div class="filter-bar">
+        <div class="filter-inner">
+            <div id="filterChips" class="chips"></div>
+            <span id="filterCount" class="filter-count"></span>
         </div>
-    </main>
-    <!--<section id="BGmiddle"></section>-->
-    <section id="footer"></section>
+    </div>
+
+    <main id="years"></main>
+
+    <footer>
+        <button id="topButton" class="btn">Back to Top ↑</button>
+        <a href="../" class="btn">Back to Home</a>
+    </footer>
+
+    <div id="lightbox" class="lightbox">
+        <button id="lbClose" class="lb-btn lb-close" aria-label="Close">✕</button>
+        <button id="lbPrev" class="lb-btn lb-prev" aria-label="Previous">‹</button>
+        <img id="lbImg" src="" alt="Project photo">
+        <button id="lbNext" class="lb-btn lb-next" aria-label="Next">›</button>
+        <p id="lbCaption"></p>
+    </div>
+
+    <script src="main.js"></script>
 </body>
-<script type="module" src="main.js" defer></script>
+
 </html>

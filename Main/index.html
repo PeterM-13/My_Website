@@ -3,8 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=0.5, user-scalable=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Peter Metcalfe's portfolio, displaying completed projects, achievements, work experience and more." />
     <meta name="keywords" content="Peter, Metcalfe, fractals, mandelbrot, portfolio, website, peter-metcalfe, peter_metcalfe, projects, Alien, Crush, AlienCrush, app, leonardo, software, code, engineering, apprentice, degree, cranfield, cottesloe" />
     <meta name="robots" content="index" />
@@ -12,360 +11,214 @@
     <title>Peter Metcalfe</title>
     <link rel="icon" type="image/png" href="images/P logo clear.png">
 
-    <link rel="stylesheet" href="CSS/main.css">
-    <link rel="stylesheet" href="CSS/references.css">
-    <link rel="stylesheet" href="CSS/header.css">
-    <link rel="stylesheet" href="CSS/projects.css">
-    <link rel="stylesheet" href="CSS/projectsSmall.css">
-    <link rel="stylesheet" href="CSS/skills.css">
-    <link rel="stylesheet" href="CSS/work.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 
 <body>
-    
-    <section class="header">
-        <div class="headerContent">
-            <div class="headerLeft">
-                <h1>Peter Metcalfe</h1>
-                <div class="infoLeft">
-                    <p class="role">Software Engineering Degree Apprentice</p>
-                    <div class="socials">
-                        <a href="https://github.com/PeterM-13" target="_blank"><img src="images/github.svg" alt="GitHub icon"/></a>
-                        <a href="https://www.linkedin.com/in/peter-metcalfe-1me/" target="_blank"><img src="images/linkedin.svg" alt="LinkedIn icon"/></a>
-                        <!--<a href="https://www.youtube.com/channel/UCIaOZi2C7F1C7663DwHgeEw" target="_blank"><img src="images/youtube.svg" alt="YouTube icon"/></a>-->
-                        <a href="https://www.instagram.com/peter_metcalfe_/" target="_blank"><img src="images/instagram.svg" alt="Instagram icon"/></a>
+
+    <nav class="nav">
+        <div class="nav-inner">
+            <a class="logo" href="#">Peter Metcalfe<span class="grad-text">.</span></a>
+            <div class="nav-links">
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#references">References</a>
+            </div>
+            <a class="btn" href="AllProjects/">All Projects</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <p class="hello">Hi, I'm</p>
+                <h1>Peter <span class="grad-text">Metcalfe</span></h1>
+                <p class="role">Software Engineering Degree Apprentice<span class="caret"></span></p>
+                <p class="tagline">I build things: apps, robots, games, websites and the occasional potato cannon.</p>
+                <div class="hero-stats">
+                    <div class="stat"><strong>75+</strong><span>projects since 2017</span></div>
+                    <div class="stat"><strong>3</strong><span>apps on the App Store</span></div>
+                    <div class="stat"><strong>3×</strong><span>Apprentice of the Year</span></div>
                 </div>
+                <div class="socials">
+                    <a href="https://github.com/PeterM-13" target="_blank" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/peter-metcalfe-1me/" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://www.instagram.com/peter_metcalfe_/" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
                 </div>
             </div>
-            <div class="headerRight">
-                <img src="images/profile.jpeg" alt="Profile">
+            <div class="hero-photo">
+                <div class="photo-ring">
+                    <img src="images/profile.jpeg" alt="Peter Metcalfe">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section" id="projects">
+        <p class="kicker reveal">Selected work</p>
+        <h2 class="reveal">Featured Projects</h2>
+        <p class="section-sub reveal">A few favourites, from hardware inventions to published apps.</p>
+        <div class="project-grid" id="featuredGrid"></div>
+        <div class="section-cta reveal">
+            <a class="btn btn-primary" href="AllProjects/">Browse all 75+ projects</a>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <p class="kicker reveal">Where I've worked</p>
+        <h2 class="reveal">Experience</h2>
+        <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section" id="skills">
+        <p class="kicker reveal">What I use</p>
+        <h2 class="reveal">Skills</h2>
+        <p class="section-sub reveal">Hover over an icon to find out more.</p>
+        <div class="icon-grid reveal" id="skillsGrid"></div>
+        <p class="icon-info" id="skillsInfo">Hover over an icon…</p>
+
+        <h3 class="sub-heading reveal">Interests</h3>
+        <div class="icon-grid reveal" id="interestsGrid"></div>
+        <p class="icon-info" id="interestsInfo">Hover over an icon…</p>
+    </section>
+
+    <section class="section" id="references">
+        <p class="kicker reveal">What people say</p>
+        <h2 class="reveal">References</h2>
+        <div class="quote-grid">
+            <figure class="quote reveal">
+                <blockquote>Peter's strength in Computer Science comes from his vision and ability to see problems…
+                    <a href="https://peter-metcalfe.co.uk/PeterMetcalfeReference.pdf" target="_blank">read in full</a>
+                </blockquote>
+                <figcaption>
+                    <span class="logo-chip"><img src="images/cottesloe.png" alt="The Cottesloe School"></span>
+                    <div>
+                        <strong>Simon Clawson</strong>
+                        <span>Head of Computing, The Cottesloe School</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="quote reveal">
+                <blockquote>Peter was a delight to have working with us at BSI…
+                    <a href="https://peter-metcalfe.co.uk/BSI%20Reference.pdf" target="_blank">read in full</a>
+                </blockquote>
+                <figcaption>
+                    <span class="logo-chip"><img src="images/bsi.png" alt="BSI"></span>
+                    <div>
+                        <strong>Gary Essam</strong>
+                        <span>Head of Training, BSI</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="quote reveal">
+                <blockquote>Peter learnt to use a *******, completed research, development, testing &amp; evaluation…</blockquote>
+                <figcaption>
+                    <span class="logo-chip"><img src="images/dstl.png" alt="DSTL"></span>
+                    <div>
+                        <strong>Anonymous</strong>
+                        <span>Senior Software Dev, DSTL</span>
+                    </div>
+                </figcaption>
+            </figure>
+            <figure class="quote reveal">
+                <blockquote>I particularly like the fact that Peter's interests extend beyond software into the wider engineering domain…</blockquote>
+                <figcaption>
+                    <span class="logo-chip"><img src="images/Leonardo Symbol.png" alt="Leonardo"></span>
+                    <div>
+                        <strong>Pete Bull</strong>
+                        <span>Chief Software Engineer, Leonardo</span>
+                    </div>
+                </figcaption>
+            </figure>
+        </div>
+
+    </section>
+
+    <section class="section" id="achievements">
+        <p class="kicker reveal">Awards</p>
+        <h2 class="reveal">Achievements</h2>
+        <div class="award-grid">
+            <div class="award reveal">
+                <span class="logo-chip"><img src="images/Leonardo Symbol.png" alt="Leonardo"></span>
+                <div class="award-body">
+                    <h3>Apprentice of the Year ×3</h3>
+                    <p>Won Leonardo's apprentice award three times.
+                        <a href="https://uk.leonardo.com/en/news-and-stories-detail/-/detail/apprentice-of-the-year-winners-2023" target="_blank">See more</a></p>
+                </div>
+            </div>
+            <div class="award reveal">
+                <span class="logo-chip"><img src="images/IMechE Logo.png" alt="IMechE"></span>
+                <div class="award-body">
+                    <h3>IMechE Automation Challenge</h3>
+                    <p>Led the apprentices to victory as team captain.
+                        <a href="https://peter-metcalfe.co.uk/StepSmart/pages/awardsPage.html" target="_blank">See more</a></p>
+                </div>
+            </div>
+            <div class="award reveal">
+                <span class="logo-chip"><img src="images/mcafee.png" alt="McAfee"></span>
+                <div class="award-body">
+                    <h3>McAfee Game Dev Competition</h3>
+                    <p>Second place with an open-world action game.
+                        <a href="https://youtu.be/dtgxWdRTyNw?t=4" target="_blank">See the game</a></p>
+                </div>
+            </div>
+            <div class="award reveal">
+                <span class="logo-chip"><img src="images/DofEGold.png" alt="Duke of Edinburgh"></span>
+                <div class="award-body">
+                    <h3>Duke of Edinburgh</h3>
+                    <p>Achieved the Gold award.</p>
+                </div>
+            </div>
+            <div class="award reveal">
+                <span class="logo-chip"><img src="images/cadets.png" alt="Industrial Cadets"></span>
+                <div class="award-body">
+                    <h3>Industrial Cadets</h3>
+                    <p>Achieved the Silver award.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="projects">
-        <div class="buttonSpacer">
-            <button class="arrow" id="leftArrow">
-                <img src="images/arrow.png" alt="Left Arrow"/>
-            </button>
+    <footer>
+        <div class="socials">
+            <a href="https://github.com/PeterM-13" target="_blank" aria-label="GitHub">
+                <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/peter-metcalfe-1me/" target="_blank" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://www.instagram.com/peter_metcalfe_/" target="_blank" aria-label="Instagram">
+                <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
         </div>
-        <div class="projectsContent">
-            <h2 id="projectsTitle">Projects</h2>
-            <div class="projectsContainer">
+        <p>© 2026 Peter Metcalfe. Designed &amp; built from scratch with HTML, CSS &amp; JavaScript.</p>
+    </footer>
 
-                <div class="project" id="project5">
-                    <div class="projectLeft">
-                        <h4>Infrared Gun</h4>
-                        <p>
-                            Made this to find out more about infrared light.
-                            <br>
-                            It is a device that receives and re-transmits signals, to mimic other infrared devices.
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <img src="images/infraredLQ.png" alt="Infrared Gun"/>
-                    </div>
-                </div>
-                <div class="project" id="project1">
-                    <div class="projectLeft">
-                        <h4>Fractal Generation</h4>
-                        <p>
-                            Developed to explore the maths behind generating the Mandelbrot set and other fractals. 
-                            <br>
-                            I even took this to the 3rd dimension.
-                            <br>
-                            This was a complex project, but the results are stunning, try for youself <a href="https://peter-metcalfe.co.uk/fractals/" target="_blank">here</a>.
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <img src="images/fractals.svg" alt="fractals"/>
-                    </div>
-                </div>
-                <div class="project" id="project2">
-                    <div class="projectLeft">
-                        <h4>Alien Crush</h4>
-                        <p>
-                            Written to explore mobile apps and game development.
-                            <br>
-                            This is a 10 level game, flying a UFO through shrinking space. 
-                            <br>
-                            
-                            Free on the <a href="https://apps.apple.com/il/app/alien-crush-3d/id1635056740?platform=iphone" target="_blank">AppStore</a> now!
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <iframe
-                            src="https://www.youtube.com/embed/2cmdgx8mqbg?autoplay=1&mute=1&loop=1&controls=1&playlist=2cmdgx8mqbg">
-                        </iframe>
-                    </div>
-                </div>
-                <div class="project" id="project3">
-                    <div class="projectLeft">
-                        <h4>Graphical Calculator</h4>
-                        <p>
-                            This can plot points, functions & charts; as wells as solving simultaneous, quadratic & cubic equations. 
-                            <br>
-                            I built this in Python for my A levels. It was a useful tool, which I am still adding to, <a href="https://github.com/PeterM-13/Graphical-Claculator" target="_blank">see here</a>.
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <img src="images/Graphs.svg" alt="Graphical Calculator"/>
-                    </div>
-                </div>
-                <div class="project" id="project4">
-                    <div class="projectLeft">
-                        <h4>Squid Game</h4>
-                        <p>
-                            A 6 player electronic game inspired by the TV show. Randomly, players are eliminated with the use of an electric shock!
-                            <br>
-                            This project required a variety of skills from the software to electronics and 3D printing.
-                            Find more details <a href="https://peter-metcalfe.co.uk/Peter%27s%20Squid%20Game.pdf" target="_blank">here</a>.
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <img src="images/squid.jpeg" alt="squid"/>
-                    </div>
-                </div>
-                <div class="project" id="project5">
-                    <div class="projectLeft">
-                        <h4>Infrared Gun</h4>
-                        <p>
-                            Made this to find out more about infrared light.
-                            <br>
-                            It is a device that receives and re-transmits signals, to mimic other infrared devices.
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <img src="images/infraredLQ.png" alt="Infrared Gun"/>
-                    </div>
-                </div>
-                <div class="project" id="project1">
-                    <div class="projectLeft">
-                        <h4>Fractal Generation</h4>
-                        <p>
-                            Developed to explore the maths behind generating the Mandelbrot set and other fractals. 
-                            <br>
-                            I even took this to the 3rd dimension.
-                            <br>
-                            This was a complex project, but the results are stunning, try for youself <a href="https://peter-metcalfe.co.uk/fractals/" target="_blank">here</a>.
-                        </p>
-                    </div>
-                    <div class="projectRight">
-                        <img src="images/fractals.svg" alt="fractals"/>
-                    </div>
-                </div>
-
+    <div id="projectModal" class="modal">
+        <div class="modal-card">
+            <button id="modalClose" class="modal-close" aria-label="Close">✕</button>
+            <img id="modalImg" src="" alt="">
+            <div class="modal-body">
+                <h3 id="modalTitle"></h3>
+                <p id="modalDesc"></p>
+                <div class="tags" id="modalTags"></div>
+                <a id="modalLink" class="btn btn-primary" target="_blank"></a>
             </div>
         </div>
-        <div class="buttonSpacer">
-            <button id="allProjects">See All Projects</button>
-            <button class="arrow">
-                <img id="rightArrow" src="images/arrow.png" alt="Right Arrow"/>
-            </button>
-        </div>
-    </section>
+    </div>
 
-
-    <section class="work1">
-        <div class="workContent1">
-            <h2>Work</h2>
-            <div class="workTop">
-                <div class="workPlace">
-                    <div class="workCircle" id="postOffice">
-                        <img class="workLogo" src="images/postOffice.png" alt="Post Office"/>
-                        <aside class="workInfo">
-                            <p id="postOfficeInfo">Evening and weekend work in local village shop</p>
-                        </aside>
-                    </div>
-                    <div class="workLine"></div>
-                </div>
-                <div class="workDate"><p>2019</p></div>
-                <div class="workPlace">
-                    <div class="workPlace">
-                        <div class="workCircle" id="resonate">
-                            <img class="workLogo" src="images/resonate.png" alt="Resonate"/>
-                            <aside class="workInfo">
-                                <p id="resonateInfo">3 Months working as software degree apprentice</p>
-                            </aside>
-                        </div>
-                    </div>
-                    <div class="workLine"></div>
-                </div>
-                <div class="workDate"><p>2024</p></div>
-                <div class="workPlace">
-                    <div class="workCircle" id="leonardo">
-                        <img class="workLogo" src="images/leonardo.png" alt="Leonardo"/>
-                        <aside class="workInfo">
-                            <p id="leonardoInfo">Currently employed as a software degree apprentice,<br>since 2022</p>
-                        </aside>
-                    </div>
-                    <div class="workLine"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="work2">
-        <div class="workContent2">
-            <div id="line"><img id="workArrow" src="images/arrow.png" alt="Arrow Head"/></div>
-            <div class="workBottom">
-                <div class="workDate"><p>2018</p></div>
-                <div class="workPlace">
-                    <div class="workLine"></div>
-                    <div class="workCircle" id="bsi">
-                        <img class="workLogo" src="images/bsi.png" alt="BSI"/>
-                        <aside class="workInfo">
-                            <p id="bsiInfo">A week placement at the Hemel office learning about test standards</p>
-                        </aside>
-                    </div>
-                </div>
-                <div class="workDate"><p>2021</p></div>
-                <div class="workPlace">
-                    <div class="workLine"></div>
-                    <div class="workCircle" id="dstl">
-                        <img class="workLogo" src="images/dstl.png" alt="DSTL"/>
-                        <aside class="workInfo">
-                            <p id="dstlInfo">4 Months at Porton Down working on robotics and neuromorphics</p>
-                        </aside>
-                    </div>
-                </div>
-                <div class="workDate"><p>2025</p></div>
-            </div>
-        </div>
-    </section>
-
-
-    <section class="skills">
-        <div class="skillsContent">
-            <h2>Skills</h2>
-            <ul class="skillsList">
-                <img class="skillIcon" src="images/skills/cpp.png" alt="C++"/>
-                <img class="skillIcon" src="images/skills/cSharp.svg" alt="C#"/>
-                <img class="skillIcon" src="images/skills/swift.png" alt="Swift"/>
-                <img class="skillIcon" src="images/skills/xcode.webp" alt="Xcode" id="Xcode"/>
-                <img class="skillIcon" src="images/skills/python.png" alt="Python"/>
-                <img class="skillIcon" src="images/skills/TensorFlow.svg" alt="Tensor Flow"/>
-                <img class="skillIcon" src="images/skills/Figma-logo.svg" alt="Figma"/>
-                <img class="skillIcon" src="images/skills/godot.png" alt="Godot"/>
-                <img class="skillIcon" src="images/skills/Blender.svg" alt="Blender"/>
-                <img class="skillIcon" src="images/skills/Fusion_360_Logo.png" alt="Fusion 360"/>
-                <img class="skillIcon" src="images/skills/arduino.svg" alt="Arduino"/>
-                <img class="skillIcon" src="images/skills/Raspberry_Pi_Logo.svg" alt="Raspberry Pi"/>
-                <img class="skillIcon" src="images/skills/html.svg" alt="HTML"/>
-                <img class="skillIcon" src="images/skills/css.svg" alt="CSS"/>
-                <img class="skillIcon" src="images/skills/javaScript.svg" alt="JavaScript"/>
-                <img class="skillIcon" src="images/skills/Node.js_logo.svg" alt="NodeJS"/>
-                <img class="skillIcon" src="images/skills/React-icon.svg" alt="React"/>
-                <img class="skillIcon" src="images/skills/postman-icon.svg" alt="Postman"/>
-                <img class="skillIcon" src="images/skills/rest-api.svg" alt="RESTful API" id="RESTapi"/>                
-                <img class="skillIcon" src="images/skills/Postgresql_elephant.svg" alt="Postgress SQL"/>
-                <img class="skillIcon" src="images/skills/EasyEda.svg" alt="EasyEDA" style="width: 150px; object-fit: contain;"/>
-                <img class="skillIcon" src="images/skills/Matlab.png" alt="MATLAB"/>
-                <img class="skillIcon" src="images/skills/Visual Studio.svg" alt="Visual Studio"/>
-                <img class="skillIcon" src="images/skills/Terminal.svg" alt="Terminal / Linux"/>
-                <img class="skillIcon" src="images/skills/Git.svg" alt="Git"/>
-                <img class="skillIcon" src="images/skills/github.png" alt="Github"/>
-                <img class="skillIcon" src="images/skills/Bitbucket SVG Icon.svg" alt="Bitbucket"/>
-                <img class="skillIcon" src="images/skills/MicrosoftTeams.svg" alt="Microsoft Teams"/>
-                <img class="skillIcon" src="images/skills/office.png" alt="Microsoft Office"/>
-                <img class="skillIcon" src="images/skills/azureDevops.webp" alt="Azure Devops"/>
-                <img class="skillIcon" src="images/skills/Jira SVG Icon.svg" alt="Jira"/>
-                <img class="skillIcon" src="images/skills/Confluence SVG Icon.svg" alt="Confluence"/>
-            </ul>
-            <p id="skillsInfo" class="skillsInfoH"></p>
-            <h2 id="interestsTitle">Interests</h2>
-            <ul class="skillsList">
-                <a href="https://www.thingiverse.com/peter-metcalfe/designs" target="_blank" class="iconLink"><img class="interestIcon" src="images/skills/3D-Printer.svg" alt="3D Printing"/></a>
-                <img class="interestIcon icon" src="images/skills/3D-Printer.svg" alt="3D Printing"/>
-                <img class="interestIcon" src="images/skills/laserCutter.png" alt="Laser Cutting"/>
-                <img class="interestIcon" src="images/skills/soldering.png" alt="Electronics"/>
-                <img class="interestIcon" src="images/skills/tools.svg" alt="Mechanical Work" id="mechanical"/>
-                <a href="https://sites.google.com/view/peters-maths-posters/home" target="_blank" class="iconLink"><img class="interestIcon" src="images/skills/code2.png" alt="Programming"/></a>
-                <img class="interestIcon icon" src="images/skills/code2.png" alt="Programming"/>
-                <img class="interestIcon" src="images/skills/badminton.svg" alt="Badminton" style="transform: scaleX(-1);"/>
-                <img class="interestIcon" src="images/skills/cycling1.png" alt="Cycling"/>
-            </ul>
-            <p id="interestsInfo" class="interestsInfoH"></p>
-        </div>
-    </section>
-
-    <section class="references">
-        <div class="referencesContent">
-            <div class="referencesBlock" id="referencesLeft">
-                <h2>References</h2>
-                <ul class="referencesList">
-                    <div class="reference">
-                        <img src="images/cottesloe.svg" alt="The Cottesloe School"/>
-                        <p>
-                            "Peter's strength in Computer Science comes from his vision and ability to see problems... 
-                            <a href="https://peter-metcalfe.co.uk/PeterMetcalfeReference.pdf" target="_blank">open</a>"
-                            <br>
-                            <span><strong>Simon Clawson</strong> - Head of Computing</span>
-                        </p>
-                    </div>
-                    <div class="reference">
-                        <img src="images/bsi.png" alt="BSI"/>
-                        <p>
-                            "Peter was a delight to have working with us at BSI... 
-                            <a href="https://peter-metcalfe.co.uk/BSI%20Reference.pdf" target="_blank">open</a>"
-                            <br>
-                            <span><strong>Gary Essam</strong> - Head of training</span>
-                        </p>
-                    </div>
-                    <div class="reference">
-                        <img src="images/dstl.png" alt="VIVID"/>
-                        <p>
-                            "Peter learnt to use a *******, completed research, development, testing & evaluation..."
-                            <br>
-                            <span><strong>Anonymous</strong>  - Senior Software Dev</span>
-                        </p>
-                    </div>
-                    <div class="reference">
-                        <img src="images/Leonardo Symbol.png" alt="Leonardo"/>
-                        <p>
-                            "I particularly like the fact that Peter’s interests extend beyond software into the wider engineering domain...                            
-                            <br>
-                            <span><strong>Pete Bull</strong>  - Cheif Software Engineer</span>
-                        </p>
-                    </div>
-                </ul>
-            </div>
-            <div class="referencesBlock" id="referencesRight">
-                <h2>Achievements</h2>
-                <ul class="referencesList">
-                    <div class="reference">
-                        <img src="images/DofE.png" alt="Duke of Edinburgh Logo"/>
-                        <p>Achieved Silver Duke of Edinburgh Award</p>
-                    </div>
-                    <div class="reference">
-                        <img src="images/cadets.svg" alt="Industrial Cadets Logo"/>
-                        <p>Achieved a Silver Industrial Cadets Award</p>
-                    </div>
-                    <div class="reference">
-                        <img src="images/mcafee.svg" alt="McAfee Logo"/>
-                        <p>Lead team to 2nd place in McAfee game development competition, see game 
-                            <a href="https://youtu.be/dtgxWdRTyNw?t=4" target="_blank">here</a></p>
-                    </div>
-                    <div class="reference">
-                        <img src="images/IMechE Logo.png" alt="IMechE Logo"/>
-                        <p>As the team captain, led apprentices to triumph in the IMechE apprentice automation challenge, more 
-                            <!-- <a href="https://www.imeche.org/news/news-article/leonardo-team-it's-all-under-control-crowned-champions-of-the-apprentice-automation-challenge-2023#:~:text=in%3A%20My%20account-,Leonardo%20Team%20It's%20All%20Under%20Control%20crowned,the%20Apprentice%20Automation%20Challenge%202023&text=Apprentices%20from%20Leonardo%20retained%20the,eight%2Dmonth%2Dlong%20project." target="_blank">here</a></p> -->
-                            <a href="https://peter-metcalfe.co.uk/StepSmart/pages/awardsPage.html" target="_blank">here</a></p>
-                        </div>
-                    <div class="reference">
-                        <img src="images/Leonardo Symbol.png" alt="Leonardo Logo"/>
-                        <p>Won Leonardo's apprentice of the year award twice, see more 
-                            <a href="https://uk.leonardo.com/en/news-and-stories-detail/-/detail/apprentice-of-the-year-winners-2023" target="_blank">here</a></p>
-                    </div>
-                </ul>
-            </div>
-        </div>
-        <!--<button class="download" onclick="window.open('https://peter-metcalfe.co.uk/Peter%20Metcalfe%20CV.pdf', '_blank')">Download CV</button>-->
-    </section>
-
+    <script src="JS/main.js"></script>
 </body>
 
-
-
-<script src="JS/projects.js"></script>
-<script src="JS/skills.js"></script>
 </html>

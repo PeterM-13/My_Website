@@ -101,279 +101,167 @@ const PROJECTS = {
 }
 
 
+// ============================================================
+// Everything below renders the page from the PROJECTS object.
+// To add a project, just add a line to PROJECTS above.
+// New years are picked up automatically.
+// ============================================================
 
-function addProjects(year){    
-    const pathStart = "images/"+year.toString()+"/"
-
-    // Get the section with id '2022'
-    const section = document.getElementById(year);
-    // Loop through each project in the array
-    for (let i = PROJECTS[year].length-1; i >= 0; i--) {
-        // Get the project name, date, images, and info
-        const projectName = PROJECTS[year][i].name;
-        const projectDate = PROJECTS[year][i].date;
-        const projectImages = PROJECTS[year][i].images;
-        const projectInfo = PROJECTS[year][i].info;
-
-        // Create a new div element with class "project" and id of the project name
-        const projectDiv = document.createElement('div');
-        projectDiv.classList.add('project');
-        projectDiv.id = projectName;
-
-        // Create a new h2 element with the project name
-        const projectNameHeader = document.createElement('h3');
-        projectNameHeader.textContent = projectName;
-
-        const sumryButton = document.createElement('button');
-        sumryButton.classList.add('summaryButton');
-        
-        const projectImage = document.createElement('img');
-        projectImage.src = pathStart + projectImages[0];
-        projectImage.alt = "0"
-        projectImage.id = year.toString()
-        if(projectImages.length > 1){
-            projectImage.style.cursor = 'pointer';
-        }
-        
-        const infoDiv = document.createElement('div');
-        infoDiv.classList.add('projectInfo');
-
-        // Create a new p element with the project info
-        const infoP = document.createElement('p');
-        infoP.id = 'infoP'
-        infoP.innerHTML = `
-            Summary: <br>
-            ${projectInfo}<br><br>
-            Date:
-            ${projectDate}`;
-
-        infoDiv.appendChild(infoP);
-        
-        // Append the h2, date, images, and info elements to the div element
-        projectDiv.appendChild(projectNameHeader);
-        projectDiv.appendChild(sumryButton);
-        projectDiv.appendChild(infoDiv);
-        projectDiv.appendChild(projectImage);
-
-        // Append the div element to the section with id '2022'
-        section.appendChild(projectDiv);
-    }
+function yearLabel(year) {
+    if (year >= 2023) return "Apprenticeship";
+    if (year >= 2021) return "Sixth Form";
+    return "GCSE";
 }
 
-function addProject(project){
-    const projectYear = Object.keys(PROJECTS).find(year => PROJECTS[year].includes(project));
-    const projectsContainer = document.getElementById(projectYear);
-    
-    const projectDiv = document.createElement('div');
-    projectDiv.classList.add('project');
-    projectDiv.id = projectName;
+const FILTERS = [
+    { key: "software", label: "Software" },
+    { key: "electrical", label: "Electrical" },
+    { key: "mechanical", label: "Mechanical" },
+    { key: "science", label: "Science" },
+    { key: "invention", label: "Inventions" },
+    { key: "award", label: "Award Winning" },
+];
 
-    const projectNameHeader = document.createElement('h3');
-    projectNameHeader.textContent = project.name;
+const YEARS = Object.keys(PROJECTS).map(Number).sort((a, b) => b - a);
+const TOTAL = YEARS.reduce((sum, y) => sum + PROJECTS[y].length, 0);
 
-    const sumryButton = document.createElement('button');
-    sumryButton.classList.add('summaryButton');
+// ---------- Filter chips ----------
+const activeFilters = new Set();
+const filterBar = document.getElementById('filterChips');
 
-    const projectImage = document.createElement('img');
-    projectImage.src = pathStart + project.images[0];
-    projectImage.alt = "0"
-    projectImage.id = year.toString()
-    if(project.images.length > 1){
-        projectImage.style.cursor = 'pointer';
-    }
-
-    const infoDiv = document.createElement('div');
-    infoDiv.classList.add('projectInfo');
-
-    // Create a new p element with the project info
-    const infoP = document.createElement('p');
-    infoP.id = 'infoP'
-    infoP.innerHTML = `
-        Summary: <br>
-        ${project.info}<br><br>
-        Date:
-        ${project.date}`;
-
-    infoDiv.appendChild(infoP);
-
-    // Append the h2, date, images, and info elements to the div element
-    projectDiv.appendChild(projectNameHeader);
-    projectDiv.appendChild(sumryButton);
-    projectDiv.appendChild(infoDiv);
-    projectDiv.appendChild(projectImage);
-
-    // Append the div element to the section with id '2022'
-    projectsContainer.appendChild(projectDiv);
-}
-
-addProjects(2026);
-addProjects(2025);
-addProjects(2024);
-addProjects(2023);
-addProjects(2022);
-addProjects(2021);
-addProjects(2020);
-addProjects(2019);
-addProjects(2018);
-addProjects(2017);
-
-const projects = document.querySelectorAll('.project');
-projects.forEach(project => {
-    const image = project.querySelector('img');
-    const info = project.querySelector('.projectInfo');
-    const sumryButton = project.querySelector('.summaryButton');
-    const year = image.id
-
-    sumryButton.addEventListener('click', () => {
-        if(info.style.display == "block"){
-            sumryButton.style.transform = 'scale(1)';
-            info.style.display = "none";
-            image.style.opacity = 1
-        }else{
-            sumryButton.style.transform = 'scale(-1)';
-            info.style.display = "block";
-            image.style.opacity = 0.05
-        }
-    })
-    
-    image.addEventListener('click', () => {
-        const pathStart = "images/"+year.toString()+"/"
-        let projectName = project.querySelector('h3').textContent;
-        let projectIndex = PROJECTS[year].findIndex(obj => obj.name === projectName);
-        let imgIndex = Number(project.querySelector('img').alt) + 1;
-
-        if(imgIndex >= PROJECTS[year][projectIndex].images.length){
-            imgIndex = 0;
-        }
-        image.src =  pathStart + PROJECTS[year][projectIndex].images[imgIndex];
-        project.querySelector('img').alt = imgIndex.toString();
-    });
-});
-
-const filterIcon = document.getElementById('filterIcon');
-const filterOptions = document.querySelectorAll('.filter');
-const filters = document.getElementById('filters');
-
-filterIcon.addEventListener('click', () => {
-    filters.classList.toggle('filters-visible');
-});
-
-filterOptions.forEach(filter => {
-    filter.addEventListener('click', () => {
-        filter.classList.toggle('clicked');
+FILTERS.forEach(f => {
+    const chip = document.createElement('button');
+    chip.className = 'chip';
+    chip.textContent = f.label;
+    chip.addEventListener('click', () => {
+        chip.classList.toggle('active');
+        if (activeFilters.has(f.key)) activeFilters.delete(f.key);
+        else activeFilters.add(f.key);
         applyFilters();
     });
+    filterBar.appendChild(chip);
 });
 
 function applyFilters() {
-    
-    let appliedFilters = [];
-    let noFiltersSelected = true;
-    
-    const softwareFilter = document.getElementById('softwareFilter');
-    const electricalFilter = document.getElementById('electricalFilter');
-    const mechanicalFilter = document.getElementById('mechanicalFilter');
-    const inventionFilter = document.getElementById('inventionFilter');
-    const scienceFilter = document.getElementById('scienceFilter');
-    const awardFilter = document.getElementById('awardFilter');
-    if (softwareFilter.classList.contains('clicked')) { appliedFilters.push('software'); noFiltersSelected = false; }
-    if (electricalFilter.classList.contains('clicked')) { appliedFilters.push('electrical'); noFiltersSelected = false; }
-    if (mechanicalFilter.classList.contains('clicked')) { appliedFilters.push('mechanical'); noFiltersSelected = false; }
-    if (inventionFilter.classList.contains('clicked')) { appliedFilters.push('invention'); noFiltersSelected = false; }
-    if (scienceFilter.classList.contains('clicked')) { appliedFilters.push('science'); noFiltersSelected = false; }
-    if (awardFilter.classList.contains('clicked')) { appliedFilters.push('award'); noFiltersSelected = false; }
-    
-
-    const projects = document.querySelectorAll('.project');
-
-    projects.forEach(project => {
-        const projectYear = project.parentNode.id;
-        const projectName = project.querySelector('h3').textContent;
-        const projectDetails = PROJECTS[projectYear];
-        const projectData = projectDetails.find(item => item.name === projectName);
-
-        if (projectData && projectData.keyWords) {
-            if (noFiltersSelected) {
-                project.style.display = '';
-                project.classList.remove('filtered');
-            } else {
-                const projectHasFilters = appliedFilters.some(filter => projectData.keyWords.includes(filter));
-
-                if (!projectHasFilters) {
-                    project.classList.add('filtered');
-                   // setTimeout(() => {
-                        project.style.display = 'none';
-                    //}, 500);
-                } else {
-                    project.style.display = '';
-                    project.classList.remove('filtered');
-                }
-            }
-        }
-    });   
-}
-
-
-const projectTitles = document.querySelectorAll('h3');
-projectTitles.forEach((projectTitle, index) => {
-    projectTitle.addEventListener('click', ()=>{
-        const parentProject = projectTitle.closest('.project');
-        if (parentProject) {
-            const imgElement = parentProject.querySelector('img');
-
-            const isClicked = parentProject.classList.contains('clicked');
-
-            const clickedProjects = document.querySelectorAll('.project.clicked');
-            clickedProjects.forEach(clickedProject => {
-                clickedProject.classList.remove('clicked');
-                const img = clickedProject.querySelector('img');
-                if (img) {
-                    img.classList.remove('clicked');
-                }
-            });
-
-            if (!isClicked) {
-                parentProject.classList.add('clicked');
-                if (imgElement) {
-                    imgElement.classList.add('clicked');
-                }
-            }
-        }
-    })
-})
-
-function removeClickedClasses() {
-    const clickedProjects = document.querySelectorAll('.project.clicked');
-    clickedProjects.forEach(clickedProject => {
-        clickedProject.classList.remove('clicked');
-        const img = clickedProject.querySelector('img');
-        if (img) {
-            img.classList.remove('clicked');
-        }
+    let shown = 0;
+    document.querySelectorAll('.project').forEach(card => {
+        const keywords = card.dataset.keywords.split(' ');
+        const visible = activeFilters.size === 0 ||
+            [...activeFilters].some(f => keywords.includes(f));
+        card.classList.toggle('hidden', !visible);
+        if (visible) shown++;
     });
-}
-document.addEventListener('keydown', event => {
-    if (event.key === 'Escape') {
-        removeClickedClasses();
-    }
-});
-// const main = document.querySelector('main');
-// main.addEventListener('click', () => {
-//     removeClickedClasses();
-// });
-
-
-if (location.protocol !== "https:") {
-    //location.protocol = "https:";
+    // Hide year sections that end up empty
+    document.querySelectorAll('.year').forEach(section => {
+        const any = section.querySelector('.project:not(.hidden)');
+        section.classList.toggle('hidden', !any);
+    });
+    document.getElementById('filterCount').textContent =
+        activeFilters.size === 0 ? `${TOTAL} projects and counting` : `${shown} of ${TOTAL} projects`;
 }
 
-const backBtn = document.getElementById("backButton");
-backBtn.addEventListener("click", () => {
-  window.location.href = "../";
+// ---------- Year sections & project cards ----------
+const main = document.getElementById('years');
+
+YEARS.forEach(year => {
+    const section = document.createElement('section');
+    section.className = 'year';
+    section.innerHTML = `<h2><span class="grad-text">${year}</span><span class="year-label">${yearLabel(year)}</span></h2>`;
+
+    const grid = document.createElement('div');
+    grid.className = 'projects-grid';
+
+    // Newest projects first within each year
+    [...PROJECTS[year]].reverse().forEach(project => {
+        grid.appendChild(makeCard(project, year));
+    });
+
+    section.appendChild(grid);
+    main.appendChild(section);
 });
 
-const topBtn = document.getElementById("topButton");
-topBtn.addEventListener("click", () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+function makeCard(project, year) {
+    const card = document.createElement('article');
+    card.className = 'project';
+    card.dataset.keywords = (project.keyWords || []).filter(Boolean).join(' ');
+
+    const imgPath = `images/${year}/`;
+    const photos = project.images.length;
+
+    card.innerHTML = `
+        <div class="thumb">
+            <img src="${imgPath}${project.images[0]}" alt="${project.name}" loading="lazy">
+            ${photos > 1 ? `<span class="img-count">${photos} photos</span>` : ''}
+        </div>
+        <div class="p-body">
+            <div class="p-top">
+                <h3>${project.name}</h3>
+                <span class="date">${project.date}</span>
+            </div>
+            <p class="p-info">${project.info}</p>
+        </div>`;
+
+    card.querySelector('.thumb').addEventListener('click', () => {
+        openLightbox(project, year);
+    });
+
+    return card;
+}
+
+// ---------- Lightbox ----------
+const lightbox = document.getElementById('lightbox');
+const lbImg = document.getElementById('lbImg');
+const lbCaption = document.getElementById('lbCaption');
+const lbPrev = document.getElementById('lbPrev');
+const lbNext = document.getElementById('lbNext');
+let lbProject = null;
+let lbYear = null;
+let lbIndex = 0;
+
+function openLightbox(project, year) {
+    lbProject = project;
+    lbYear = year;
+    lbIndex = 0;
+    updateLightbox();
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    lightbox.classList.remove('open');
+    document.body.style.overflow = '';
+}
+
+function updateLightbox() {
+    lbImg.src = `images/${lbYear}/${lbProject.images[lbIndex]}`;
+    lbCaption.textContent = `${lbProject.name} (${lbIndex + 1} of ${lbProject.images.length})`;
+    const multi = lbProject.images.length > 1;
+    lbPrev.style.display = multi ? '' : 'none';
+    lbNext.style.display = multi ? '' : 'none';
+}
+
+function lbStep(dir) {
+    const n = lbProject.images.length;
+    lbIndex = (lbIndex + dir + n) % n;
+    updateLightbox();
+}
+
+lbPrev.addEventListener('click', e => { e.stopPropagation(); lbStep(-1); });
+lbNext.addEventListener('click', e => { e.stopPropagation(); lbStep(1); });
+lbImg.addEventListener('click', e => e.stopPropagation());
+lightbox.addEventListener('click', closeLightbox);
+document.getElementById('lbClose').addEventListener('click', closeLightbox);
+
+document.addEventListener('keydown', e => {
+    if (!lightbox.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbStep(-1);
+    if (e.key === 'ArrowRight') lbStep(1);
 });
+
+// ---------- Buttons ----------
+document.getElementById('topButton').addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+applyFilters();
