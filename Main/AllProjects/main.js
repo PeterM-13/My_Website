@@ -1,10 +1,18 @@
 //import PROJECTS from './Projects.json';
 const PROJECTS = { 
+    2026: [
+        {name:"AI Football", date:"18/3/26", images:["Football 1.png","Football 2.png","Football 3.png","Football 4.png","Football 5.png"], info:"Artificial intelligence learns to play football", keyWords:['software','electrical','mechanical','award','team']},
+        {name:"Micro-Mouse Final", date:"10/4/26", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition, <a target='_blank' href='https://www.linkedin.com/posts/peter-metcalfe-1me_micromouse-2026-at-leonardo-new-robots-new-ugcPost-7449409305688096768-9uiv'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
+    ],
     2025: [
         {name:"DIY Oscilloscope", date:"8/2/25", images:["Scope1.jpeg","Scope2.jpeg","Scope3.jpeg"], info:"Home made oscilloscope, and custom adjustable stand", keyWords:['electrical']},
-        {name:"Micro-Mouse Final", date:"28/2/24", images:["Mouse1.jpeg","Mouse2.jpeg","Mouse3.jpeg","Mouse4.jpeg","Mouse5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition, <a target='_blank' href='https://www.instagram.com/reel/DHLWK2mNXE-/'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
-        {name:"Maagic Sticks", date:"18/4/25", images:["Sticks1.jpeg","Sticks2.jpeg","Sticks3.jpeg","Sticks4.jpeg"], info:"Magic sticks that spin forever!", keyWords:['electrical','mechanical']},
+        {name:"Micro-Mouse Final", date:"28/2/25", images:["Mouse1.jpeg","Mouse2.jpeg","Mouse3.jpeg","Mouse4.jpeg","Mouse5.jpeg"], info:"Robotic mice, huge maze, custom PCBs, maze-solving competition, <a target='_blank' href='https://www.instagram.com/reel/DHLWK2mNXE-/'>see video</a>", keyWords:['software','electrical','mechanical','award','team']},
+        {name:"Magic Sticks", date:"18/4/25", images:["Sticks1.jpeg","Sticks2.jpeg","Sticks3.jpeg","Sticks4.jpeg"], info:"Magic sticks that spin forever!", keyWords:['electrical','mechanical']},
         {name:"Robot Website", date:"2/5/25", images:["RCSite1.jpeg","RCSite2.jpeg","RCSite3.jpeg","RCSite4.jpeg"], info:"Site to help track schools building Rampaging Chariots", keyWords:['software']},
+        {name:"AI Song Rater", date:"29/5/25", images:["songRater1.jpeg","songRater2.jpeg"], info:"A custom AI model designed to rate songs based on my preference, <a target='_blank' href='https://github.com/PeterM-13/AI-Song-Rater'>see on GitHub</a>", keyWords:['software']},
+        {name:"Dreamlab Website", date:"22/4/25 - 26/6/25", images:["dreamlab1.jpeg","dreamlab2.jpeg","dreamlab3.jpeg","dreamlab4.jpeg","dreamlab5.jpeg"], info:"A site to upload 2D pics and get them converted to 3D models to experiment with new room layouts, <a target='_blank' href='https://github.com/PeterM-13/dreamlab-client'>see GitHub</a>", keyWords:['software','team']},
+        {name:"Smart Walking Stick V3", date:"1/7/25", images:["stepsmart1.jpeg","stepsmart2.jpeg","stepsmart3.jpeg","stepsmart4.jpeg","stepsmart5.jpeg"], info:"Submitted to James Dyson Award. Bluetooth app, GPS, fall detection, obstacle detection and much <a target='_blank' href='https://peter-metcalfe.co.uk/StepSmart/Home/'>more</a>", keyWords:['software','electrical','mechanical','invention','team','award']},
+        {name:"LightSymphony iOS App", date:"7/24 - 13/26", images:["LSApp1.jpeg","LSApp2.jpeg","LSApp3.jpeg","LSApp4.jpeg"], info:"Garden lighting app, wirelessly control your lights, use timers, colours, and GPS, <a target='_blank' href='https://apps.apple.com/gb/app/lightsymphony/id6743965202'>see on AppStore</a>", keyWords:['software']},
     ],
     2024: [
         {name:"Micro-Mouse Prototype", date:"20/3/24", images:["Mouse 1.jpeg","Mouse 2.jpeg","Mouse 3.jpeg","Mouse 4.jpeg","Mouse 5.jpeg"], info:"Working robotic mouse prototype with IR sensors to navigate mazes", keyWords:['software','electrical','mechanical']},
@@ -198,6 +206,7 @@ function addProject(project){
     projectsContainer.appendChild(projectDiv);
 }
 
+addProjects(2026);
 addProjects(2025);
 addProjects(2024);
 addProjects(2023);
